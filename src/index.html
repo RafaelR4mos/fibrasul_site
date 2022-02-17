@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FibrasulRS manutenções industriais">
+    <title>FibrasulRS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a class="header-items" href="#">Home</a>
+        <a class="header-items" href="#">Serviços</a>
+        <a class="header-items" href="#">Infraestrutura</a>
+        <a class="header-items" href="#">Contato</a>
+    </header>
+
+    <main class="main">
+        <div class="main-logo-text">
+            <img class="main-fibrasul-logo" src="../assets/fibrasul-logo.svg" alt="Logo da FibrasulRS">
+            <h2 class="main-subtitle">HÁ 8 ANOS GARANTINDO QUALIDADE E SEGURANÇA NOS SERVIÇOS PRESTADOS</h2>
+        </div>
+
+        <div id="carousel-main">
+            <button class="btn" id="btnL">
+                <img id="btn-img" src="../assets/arrow-button.svg" alt="Botão voltar">
+            </button>
+
+            <button class="btn" id="btnR">
+                <img id="btn-img" src="../assets/arrow-button.svg" alt="Botão prosseguir">
+            </button>
+
+            <div id="carousel-items">
+                <div class="carousel-content"><img class="carousel-images"
+                        src="https://unsplash.it/1600/400?image=950" /></div>
+                <div class="carousel-content"><img class="carousel-images"
+                        src="https://unsplash.it/1600/400?image=930" /></div>
+                <div class="carousel-content"><img class="carousel-images"
+                        src="https://unsplash.it/1600/400?image=990" /></div>
+                <div class="carousel-content"><img class="carousel-images"
+                        src="https://unsplash.it/1600/400?image=980" /></div>
+                <div class="carousel-content"><img class="carousel-images"
+                        src="https://unsplash.it/1600/400?image=970" /></div>
+                <div class="carousel-content"><img class="carousel-images"
+                        src="https://unsplash.it/1600/400?image=976" /></div>
+                <div class="carousel-content"><img class="carousel-images"
+                        src="https://unsplash.it/1600/400?image=993" /></div>
+                <div class="carousel-content"><img class="carousel-images"
+                        src="https://unsplash.it/1600/400?image=969" /></div>
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div id="main-aboutUs">
+                <h1 class="title">Quem somos nós</h1>
+                <img class="img" src="../assets/gear-icon.svg" alt="icone de engrenagem">
+
+                <p class="text">Somos especializados no trabalho em que oferecemos, buscando constantemente padrões de
+                    excelência
+                    quanto a questões de segurança para com os nossos colaboradores, além de, processos e demais
+                    trabalhos envolvidos no ramo. Entendemos que o elemento humano é o nosso maior patrimônio.</p>
+            </div>
+
+            <div id="main-data">
+
+                <div id="first-line-content">
+                    <div id="first-container">
+                        <div id="first-line-container">
+                            <h2 class="data-text">+ 1200</h2>
+                            <img class="img" src="../assets/shield-icon.svg" alt="Icone de segurança">
+                        </div>
+                        <p class="text">Dias sem acidentes/incidentes no trabalho</p>
+                    </div>
+
+                    <div id="second-container">
+                        <div id="second-line-container">
+                            <h2 class="data-text">+ 50</h2>
+                            <img class="img" src="../assets/quality-icon.svg" alt="Icone de qualidade">
+                        </div>
+                        <p class="text">Funcionários qualificados </p>
+                    </div>
+                </div>
+
+                <div id="second-line-content">
+                    <div id="third-container">
+                        <div id="third-line-container">
+                            <h2 class="data-text">+ 150</h2>
+                            <img class="img" src="../assets/job-icon.svg" alt="Icone de trabalhos">
+                        </div>
+                        <p class="text">Macro e micro serviços realizados</p>
+                    </div>
+                </div>
+
+                <div id="services-div-button">
+                    <button id="services-button">SAIBA MAIS SOBRE SERVIÇOS</button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="content">
+            <h1 classe="title">Com quem já trabalhamos</h1>
+        </div>
+
+        <div class="image-layout">
+            <div class="images"><img src="../assets/valmet-logo.svg" alt="valmet logo"></div>
+            <div class="images"><img src="../assets/stihl-logo.svg" alt="stihl logo"></div>
+            <div class="images"><img src="../assets/cmpc-logo.svg" alt="cmpc logo"></div>
+            <div class="images"><img src="../assets/gm-logo.svg" alt="gm logo"></div>
+            <div class="images"><img src="../assets/toyota-logo-novo.svg" alt="toyota logo"></div>
+        </div>
+
+        <div id="know-btn">
+            <button id="know-team-button">CONHEÇA NOSSA INFRAESTRUTURA E EQUIPE</button>
+        </div>
+
+    </main>
+
+    <footer classname="footer">
+        <img class="fibrasul-logo" src="../assets/fibrasul-logo.svg">
+
+        <div class="contatos">
+            <div class="email-content">
+                <img src="../assets/email-icon.svg" alt="e-mail icone">
+                <p>contato@fibrasulrs.com</p>
+            </div>
+
+            <div class="telefone-content">
+                <img src="../assets/telefone-icon.svg" alt="telefone icone">
+                <p>(51) 9 8137-5450</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const imagesAmount = document.querySelectorAll(".carousel-content").length;
+        let images;
+        let imagesPosition = 0;
+        let touchStart, touchEnd;
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.documentElement.style.setProperty('--windowWidth', `${(window.innerWidth / 2000) + "s"}`);
+
+            images = document.querySelector('#carousel-items')
+
+            document.querySelector('#btnL').addEventListener("click", () => { move(1) })
+            document.querySelector('#btnR').addEventListener("click", () => { move(-1) })
+            document.querySelector('#carousel-main').addEventListener("touchstart", (event) => { touchStart = Math.floor(event.changedTouches[0].screenX) })
+            document.querySelector('#carousel-main').addEventListener("touchend", (event) => {
+                touchEnd = Math.floor(event.changedTouches[0].screenX);
+                if (touchStart > touchEnd) {
+                    move(-1);
+                } else {
+                    move(1);
+                }
+            })
+        });
+
+        window.addEventListener("resize", function () {
+            console.log('resize');
+            document.documentElement.style.setProperty('--windowWidth', `${(window.innerWidth / 2000) + "s"}`);
+            move(0);
+        });
+
+        function move(direction) {
+            const imageW = images.offsetWidth;
+            imagesPosition += direction;
+
+            imagesPosition = (imagesPosition > 0) ? 0 : (Math.abs(imagesPosition) <= (imagesAmount - 1)) ? imagesPosition : -(imagesAmount - 1);
+
+            if (direction == 0) {
+                images.classList.remove('animate');
+            } else {
+                images.classList.add('animate');
+            }
+
+            images.style.transform = "translateX(" + imagesPosition * imageW + "px)";
+
+        }
+    </script>
+</body>
+
+</html>
