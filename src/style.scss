@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: row-reverse;
 
-    margin-right: 8%;
+    margin-right: 20px  ;
 
     .header-items {
       text-decoration: none;
@@ -49,25 +49,27 @@
     flex-wrap: wrap;
 
     .main-logo-text {
+      width: 100vw;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
+
+      #img-logo {
+        width: 35vw;
+        height: auto;
+      }
+  
+      #h2-subtitle {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+  
+        color: #615A8A;
+      }
     }
 
-    .main-fibrasul-logo {
-      width: 35vw;
-      height: auto;
-    }
-
-    .main-subtitle {
-      margin: 10px 0px 10px 0px;
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 27px;
-      font-weight: 700;
-
-      color: #615A8A;
-    }
+   
 
     #carousel-main {
       position: relative;
@@ -103,6 +105,7 @@
           transform: scale(1.1);
         }
       }
+    
 
       .animate {
         transition-duration: unquote(#{var(--windowWidth)});
@@ -112,6 +115,7 @@
         display: flex;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
+
 
         .carousel-content {
           flex: none;
@@ -141,31 +145,36 @@
 
     #main-aboutUs {
       width: 50vw;
-      display: block;
-      flex-wrap: wrap;
       border-right: 1px solid #000000;
       padding: 0 15px 0 15px;
 
-      .title {
-        margin: 0 0 1% 22%;
-        font-family: 'Rajdhani', sans-serif;
-        font-size: 40px;
-        font-weight: 700;
-
-        color:#AB2727;
-      }
-
-      .img {
-        margin: 0 0 5% 40%;
-      }
-
-      .text {
-        font-family: 'Inter';
-        font-size: 20px;
-        font-weight: 500;
-        text-align: justify;
-
-        color:#000000;
+      .main-aboutUs-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .title {
+          font-family: 'Rajdhani', sans-serif;
+          font-size: 40px;
+          font-weight: 700;
+  
+          color:#AB2727;
+        }
+  
+        .img {
+          width: 45px;
+          margin: 10px 0 10px 0;
+        }
+  
+        .text {
+          font-family: 'Inter';
+          font-size: 20px;
+          font-weight: 500;
+          text-align: justify;
+  
+          color:#000000;
+        }
       }
     }
 
@@ -183,7 +192,7 @@
         justify-content: space-between;
         align-items: center;
         gap: 20px;
-        margin: 1% 0 0 1%;
+        margin: 1% 0 0 3%;
 
         #first-container {
           width: auto;
@@ -193,7 +202,7 @@
 
           #first-line-container {
             display: flex;
-            gap: 10px;
+            gap: 5px;
           }
         }
 
@@ -203,7 +212,7 @@
 
           #second-line-container {
             display: flex;
-            gap: 10px;
+            gap: 5px;
           }
         }
       }
@@ -244,20 +253,20 @@
 
       .data-text{
         font-family: 'Rajdhani', sans-serif;
-        font-size: 40px;
+        font-size: 2rem;
         font-weight: 700;
 
         color: #423D62;
       }
 
       .img {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
       }
 
       .text {
         font-family: 'Inter', sans-serif;
-        font-size: 16px;
+        font-size: 0.9rem;
         font-weight: 700;
 
         color: #000000;
@@ -297,12 +306,6 @@
       }
   }
 
-    .img {
-      width: 10%;
-      height: auto;
-    }
-
-
     .content {
         display: flex;
         align-items: center;
@@ -329,9 +332,15 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 3%;
+      margin-bottom: 30px;  
 
      .images {
        display: inline-block
+     }
+
+     img {
+       width: 15vw;
+       height: auto;
      }
    }
 
@@ -407,33 +416,141 @@
     }
   }
 
-  @media  (max-width: 600px) {
+  @media  (max-width: 830px) {
     .header {
       display: none;
     }
 
     .main {
-      .main-subtitle {
-        font-size: 65%;
+      .main-logo-text {
+        margin-bottom: 5px;
+          #img-logo {
+            width: 30vw;
+          }
+          #h2-subtitle {
+            font-size: 1rem;
+        }
       }
 
       #carousel-main {
         height: auto;
+
+          .btn {
+            top: 25%;
+            
+            #btn-img {
+              width: 60px;
+              height: auto;
+            }
+          }
+
         #carousel-items {
           .carousel-content {
             height: 200px;
            }
         }
-        
+      }
+      #main-content {
+        #main-aboutUs {
+          .main-aboutUs-content {
+            .title {
+              font-size: 2rem;
+            }
+  
+            .img {
+              width: 35px;
+            }
+  
+            .text {
+              font-size: 0.9rem;
+            }
+          }
+        }
+          #main-data {
+              gap: 5px;
+                #first-line-content {
+                .data-text {
+                  font-size: 1.5rem;
+                }
+                
+                .img {
+                  width: 30px;
+                  height: auto
+                }
+  
+                .text {
+                  font-size: 0.7rem;
+                }
+              }
+                #second-line-content {
+                  .data-text {
+                    font-size: 3rem;
+                  }
+  
+                  .img {
+                    width: 50px;
+                    height: auto
+                  }
+  
+                  .text {
+                    font-size: 0.8rem;
+                  }
+                }
+  
+                #services-div-button {
+                  #services-button {
+                    font-size: 0.5rem;
+                    padding: 0 2px 0 2px;
+                    height: 8vh;
+                  }
+                }
+            }
+          }
+          .content {
+            h1 {
+              font-size: 2rem;
+            }
+          }
+
+          .image-layout {
+            
+            img {
+              width: 200px;
+              height: auto
+            }
+          }
+          #know-btn {
+            #know-team-button {
+              font-size: 9px;
+            }
+          }
+        }
+
+        footer {
+          .contatos {
+            margin-top: 10px;
+            img {
+              width: 5%;
+              height: auto
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+        }
       }
       
-    }
+
+
+  @media  (max-width: 530px) {
 
     #main-content {
-      display: none;
-    }
+      #main-aboutUs {
+        .main-aboutUs-content {
 
-   
+        }
+      }
+    }
 
   }
 
