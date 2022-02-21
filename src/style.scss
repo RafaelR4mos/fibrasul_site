@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: row-reverse;
 
-    margin-right: 20px  ;
+    margin: 15px 20px 0 0;
 
     .header-items {
       text-decoration: none;
@@ -61,6 +61,7 @@
       }
   
       #h2-subtitle {
+        padding: 10px 0 10px 0;
         font-family: 'Rajdhani', sans-serif;
         font-size: 1.5rem;
         font-weight: 700;
@@ -146,7 +147,7 @@
     #main-aboutUs {
       width: 50vw;
       border-right: 1px solid #000000;
-      padding: 0 15px 0 15px;
+      padding: 0 20px 0 15px;
 
       .main-aboutUs-content {
         display: flex;
@@ -289,6 +290,7 @@
 
           background-color: #AB2727;
           border: 1px solid #000000;
+          border-radius: 5px;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           }
 
@@ -364,6 +366,7 @@
       padding: 5px 5px 5px 5px;
       background-color: #AB2727;
       border: 1px solid #000000;
+      border-radius: 10px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
@@ -386,34 +389,57 @@
       justify-content:space-between;
 
       width: 100%;
-      height: 12vh;
+      height: auto;
       background-color: #D1D1D1;
+      padding: 5px 0 5px 0;
 
-      img {
-        margin-left: 1%;
-        width: 10%;
+      #fibrasul-logo {
+        margin-left: 10px;
+        width: 120px;
+        height: auto;
+      }
+
+      .icon {
+        width: 20px;
         height: auto;
       }
 
       .contatos {
-        margin-top: 15px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-right: 20px;
 
         .email-content {
           display: flex;
           justify-content: center;
           align-items: flex-start;
-          gap: 2px;
+          gap: 4px;
         }
 
         .telefone-content {
           display: flex;
           justify-content: center;
           align-items: flex-start;
-          gap: 2px;
+          gap: 4px;
         }
+
+        .contact-a {
+          text-decoration: none;
+          font-family: 'Inter', sans-serif;
+          font-size: 12px;
+          font-weight: 600;
+
+          color: #000000;
+          }
+
+          .contact-a:hover {
+            color: #284f69;
+            transition: 250ms;
+          }
     }
+   
   }
 
   @media  (max-width: 830px) {
@@ -533,9 +559,7 @@
               width: 5%;
               height: auto
             }
-            p {
-              font-size: 12px;
-            }
+            
           }
         }
       }
