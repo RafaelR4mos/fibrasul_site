@@ -72,31 +72,7 @@
 
             <div id="main-data">
 
-                <div class="highlights">
-
-                    <div class="container item-1">
-                        <h1 class="plus">+</h1>
-                        <h1 class="number-text">1200</h1>
-                        <span class="logo"><img src="../assets/quality-icon.svg" alt=""></span>
-                    </div>
-
-                    <div class="container item-2">
-                        <h1 class="plus">+</h1>
-                        <h1 class="number-text">1200</h1>
-                        <span class="logo"><img src="../assets/quality-icon.svg" alt=""></span>
-                    </div>
-                    <div class="container item-2">
-                        <h1 class="plus">+</h1>
-                        <h1 class="number-text">1200</h1>
-                        <span class="logo"><img src="../assets/quality-icon.svg" alt=""></span>
-                    </div>
-                    <div class="container item-2">
-                        <h1 class="plus">+</h1>
-                        <h1 class="number-text">1200</h1>
-                        <span class="logo"><img src="../assets/quality-icon.svg" alt=""></span>
-                    </div>
-
-                </div>
+                <div class="highlights"></div>
 
 
                 <div id="services-div-button">
@@ -148,10 +124,55 @@
     </footer>
 
     <script>
+        const highlightsData = [
+
+            {
+                topText: "DIAS SEM ACIDENTES OU",
+                bottomText: "INCIDENTES NO TRABALHO",
+                number: 1200,
+                icon: "shield-icon",
+
+            },
+            {
+                topText: "FUNCIONÁRIOS",
+                bottomText: "QUALIFICADOS",
+                number: 50,
+                icon: "quality-icon"
+            },
+            {
+
+                topText: "MACRO E MICRO",
+                bottomText: "SERVIÇOS REALIZADOS",
+                number: 150,
+                icon: "job-icon",
+                extraClasses: ["bigger"]
+            }
+        ]
         const imagesAmount = document.querySelectorAll(".carousel-content").length;
         let images;
         let imagesPosition = 0;
         let touchStart, touchEnd;
+
+        async function fetchHtmlAsText(url) {
+            return await (await fetch(url)).text();
+        }
+
+        async function loadHighlights(index, data) {
+            let hl = document.createElement('div');
+            hl.innerHTML = await fetchHtmlAsText("highlight.html");
+            hl.classList.add("container");
+            hl.classList.add("item-" + index);
+            hl.querySelector(".container .top-text").innerHTML = data.topText;
+            hl.querySelector(".container .number-text").innerHTML = data.number;
+            hl.querySelector(".container .bottom-text").innerHTML = data.bottomText;
+            hl.querySelector(".container .logo").innerHTML = '<img src="../assets/' + data.icon + '.svg" alt="">';
+            if (data.extraClasses && data.extraClasses.length > 0) {
+                for (let i = 0; i < data.extraClasses.length; i++) {
+                    hl.classList.add(data.extraClasses[i]);
+                }
+            }
+            document.querySelector('.highlights').appendChild(hl);
+        }
 
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -169,7 +190,13 @@
                 } else {
                     move(1);
                 }
-            })
+            });
+
+            for (let i = 0; i < highlightsData.length; i++) {
+                loadHighlights(i + 1, highlightsData[i]);
+
+            }
+
         });
 
         window.addEventListener("resize", function () {

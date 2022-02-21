@@ -184,20 +184,21 @@
       display: flex;
       flex-direction: column;
       background-color: #F4F4F4;
+      margin-left: 24px;
 
       .highlights {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         padding: 20px;
+        gap: 15px;
 
         .container {
           position: relative;
           display: flex;
-          align-items: center;
-       
-          
-
+          align-items: center;  
+          margin: 0 10px 0 10px;
+        
           .number-text {
             font-family: 'Rajdhani', sans-serif;
             font-size: 50px;
@@ -218,7 +219,9 @@
             width: 50px;
           }
 
-          &:before, &:after {
+
+
+          .top-text, .bottom-text {
             position: absolute;
 
             font-family: 'Inter', sans-serif;
@@ -229,51 +232,39 @@
             color: #000000;
           }
 
-          &:before {
+          .top-text {
             top: 10px;
             left: 0px;
             
           }
 
-          &:after {
+          .bottom-text {
             bottom: 10px;
             right: 0px;
-            content: 'AFTER';
-          }
+          }        
 
-          &.item-1{
-            &:before {
-              content: 'BEFORE ITEM 1';
+          
+          &.bigger {
+          
+            .number-text {
+              font-size: 65px;
+              margin-right: 10px;
+            }
+            .top-text, .bottom-text {
+              font-size: 14px;
             }
 
-            &:after {
-              content: 'AFTER ITEM 1';
-            }
-          }
-
-          &.item-2{
-            &:before {
-              content: 'BEFORE ITEM 2';
+            .plus {
+              font-size: 85px;
             }
 
-            &:after {
-              content: 'AFTER ITEM 2';
+            img {
+              width: 60px
             }
-          }
-        
+           }
        }
       }
         
-
-      .second-line {
-        display: flex;
-      }
-
-      img {
-        width: 20vw;
-        height: auto;
-      }
-
       #services-div-button {
         width: 45vw;
         display: flex;
@@ -281,9 +272,10 @@
 
         #services-button {
           padding: 0 5px 0 5px;
+          margin: 0 10px 10px 0 ;
           cursor: pointer;
           font-family: 'Inter', sans-serif;
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 700;
           color: #FFFFFF;
 
