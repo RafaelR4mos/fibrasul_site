@@ -1,573 +1,619 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Rajdhani:wght@700&display=swap&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Rajdhani:wght@700&display=swap&display=swap");
 
 :root {
   --windowWidth: 1.5s;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  font-size: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+
+  margin: 15px 20px 0 0;
+
+  .header-items {
+    text-decoration: none;
+    padding: 10px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #a1a1a1;
   }
-
-  html, body {
-    max-width: 100vw;
-    margin: 0;
-    border: 0;
-    outline: 0;
-
-  }
-
-  body {
-    font-size: 100%;
-  }
-
-  .header {
-    display: flex;
-    flex-direction: row-reverse;
-
-    margin: 15px 20px 0 0;
-
-    .header-items {
-      text-decoration: none;
-      padding: 10px;
-
-      font-family: 'Inter', sans-serif;
-      font-size: 18px;
-      font-weight: 800;
-      color: #A1A1A1;
-    }
 
   :hover {
-    color: #7C7C7C;
-    transition: 500ms
+    color: #7c7c7c;
+    transition: 500ms;
   }
 }
 
-  .main {
+.main {
+  display: flex;
+  flex-wrap: wrap;
+
+  .main-logo-text {
+    width: 100vw;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    .main-logo-text {
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    #img-logo {
+      width: 35vw;
+      height: auto;
+    }
 
-      #img-logo {
-        width: 35vw;
-        height: auto;
-      }
-  
-      #h2-subtitle {
-        padding: 10px 0 10px 0;
-        font-family: 'Rajdhani', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-  
-        color: #615A8A;
+    #h2-subtitle {
+      padding: 10px 0 10px 0;
+      font-family: "Rajdhani", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+
+      color: #615a8a;
+    }
+  }
+
+  #carousel-main {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+
+    #btnL {
+      left: 0px;
+    }
+
+    #btnR {
+      right: 0px;
+      transform: scaleX(-1);
+    }
+
+    .btn {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 35%;
+
+      padding: 0;
+      border: none;
+      background: none;
+
+      z-index: 2;
+
+      cursor: pointer;
+
+      :hover {
+        transition: 250ms;
+        transform: scale(1.1);
       }
     }
 
-   
+    .animate {
+      transition-duration: unquote(#{var(--windowWidth)});
+    }
 
-    #carousel-main {
-      position: relative;
-      width: 100vw;
-      overflow: hidden;
+    #carousel-items {
+      display: flex;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
 
-      #btnL {
-        left: 0px;
+      .carousel-content {
+        flex: none;
+
+        width: 100%;
+        height: 400px;
+
+        scroll-snap-align: start;
+
+        z-index: 1;
       }
 
-      #btnR {
-        right: 0px;
-        transform: scaleX(-1);
+      .carousel-images {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+#main-content {
+  width: 100vw;
+  margin-top: 15px;
+  display: flex;
+
+  #main-aboutUs {
+    width: 50vw;
+    border-right: 1px solid #000000;
+    padding: 0 20px 0 15px;
+
+    .main-aboutUs-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        font-family: "Rajdhani", sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+
+        color: #ab2727;
       }
 
-      .btn {
-
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        top: 35%;
-
-        padding: 0;
-        border: none;
-        background: none;
-
-        z-index: 2;
-
-        cursor: pointer;
-
-        :hover {
-          transition: 250ms;
-          transform: scale(1.1);
-        }
-      }
-    
-
-      .animate {
-        transition-duration: unquote(#{var(--windowWidth)});
+      .img {
+        width: 45px;
+        margin: 10px 0 10px 0;
       }
 
-      #carousel-items {
-        display: flex;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
+      .text {
+        font-family: "Inter";
+        font-size: 20px;
+        font-weight: 500;
+        text-align: justify;
 
-
-        .carousel-content {
-          flex: none;
-
-          width: 100%;
-          height: 400px;
-
-          scroll-snap-align: start;
-
-          z-index: 1;
-        }
-
-        .carousel-images {
-          width: 100%;
-          height: 100%;
-
-          object-fit: cover;
-        }
+        color: #000000;
       }
     }
   }
 
-  #main-content {
-    width: 100vw;
-    margin-top: 15px;
+  #main-data {
+    width: 47vw;
     display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    margin-left: 18px;
 
-    #main-aboutUs {
-      width: 50vw;
-      border-right: 1px solid #000000;
-      padding: 0 20px 0 15px;
-
-      .main-aboutUs-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-        .title {
-          font-family: 'Rajdhani', sans-serif;
-          font-size: 40px;
-          font-weight: 700;
-  
-          color:#AB2727;
-        }
-  
-        .img {
-          width: 45px;
-          margin: 10px 0 10px 0;
-        }
-  
-        .text {
-          font-family: 'Inter';
-          font-size: 20px;
-          font-weight: 500;
-          text-align: justify;
-  
-          color:#000000;
-        }
-      }
-    }
-
-    #main-data {
-      width: 45vw;
+    .highlights {
       display: flex;
-      flex-direction: column;
-      background-color: #F4F4F4;
-      margin-left: 24px;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 25px 20px;
 
-      .highlights {
+      .container {
+        position: relative;
         display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        padding: 20px;
-        gap: 15px;
+        align-items: center;
 
-        .container {
-          position: relative;
-          display: flex;
-          align-items: center;  
-          margin: 0 10px 0 10px;
-        
+        .number-text {
+          font-family: "Rajdhani", sans-serif;
+          font-size: 50px;
+          font-weight: 700;
+
+          color: #423d62;
+        }
+
+        .plus {
+          font-family: "Rajdhani", sans-serif;
+          font-size: 70px;
+          font-weight: 700;
+
+          color: #423d62;
+        }
+
+        img {
+          width: 50px;
+        }
+
+        .top-text,
+        .bottom-text {
+          position: absolute;
+
+          font-family: "Inter", sans-serif;
+          font-size: 12px;
+          font-weight: 500;
+          font-style: oblique;
+
+          color: #000000;
+        }
+
+        .top-text {
+          top: 10px;
+          left: 0px;
+        }
+
+        .bottom-text {
+          bottom: 10px;
+          right: 0px;
+        }
+
+        &.specific1 {
+          padding: 0 30px 0 0;
+
+          .bottom-text {
+            bottom: -5px;
+            left: 5px;
+          }
+        }
+
+        &.specific2 {
+          padding: 0 25px 0;
+        }
+
+        &.specific3 {
+          padding: 0 20px 0 20px;
           .number-text {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 50px;
-            font-weight: 700;
-    
-            color: #423D62;
+            font-size: 65px;
+            margin-right: 10px;
+          }
+          .top-text,
+          .bottom-text {
+            font-size: 14px;
           }
 
           .plus {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 70px;
-            font-weight: 700;
-    
-            color: #423D62;
+            font-size: 85px;
           }
 
           img {
-            width: 50px;
+            width: 60px;
           }
-
-
-
-          .top-text, .bottom-text {
-            position: absolute;
-
-            font-family: 'Inter', sans-serif;
-            font-size: 12px;
-            font-weight: 500;
-            font-style: oblique;
-
-            color: #000000;
-          }
-
-          .top-text {
-            top: 10px;
-            left: 0px;
-            
-          }
-
-          .bottom-text {
-            bottom: 10px;
-            right: 0px;
-          }        
-
-          
-          &.bigger {
-          
-            .number-text {
-              font-size: 65px;
-              margin-right: 10px;
-            }
-            .top-text, .bottom-text {
-              font-size: 14px;
-            }
-
-            .plus {
-              font-size: 85px;
-            }
-
-            img {
-              width: 60px
-            }
-           }
-       }
+        }
       }
-        
-      #services-div-button {
-        width: 45vw;
-        display: flex;
-        justify-content: flex-end;
+    }
 
-        #services-button {
-          padding: 0 5px 0 5px;
-          margin: 0 10px 10px 0 ;
-          cursor: pointer;
-          font-family: 'Inter', sans-serif;
-          font-size: 16px;
-          font-weight: 700;
-          color: #FFFFFF;
+    #services-div-button {
+      width: 45vw;
+      display: flex;
+      justify-content: flex-end;
 
-          width: auto;
+      #services-button {
+        padding: 0 5px 0 5px;
+        margin: 0 10px 10px 0;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #ffffff;
 
-          background-color: #AB2727;
-          border: 1px solid #000000;
-          border-radius: 5px;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          }
+        width: auto;
 
-          #services-button::after {
-            content: " ->";
-          }
-
-          #services-button:hover {
-            background-color: #721e1e;
-            transition: 500ms;
-            transform: scale(1.1);
-          }
+        background-color: #ab2727;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       }
-     }
+
+      #services-button::after {
+        content: " ->";
+      }
+
+      #services-button:hover {
+        background-color: #721e1e;
+        transition: 500ms;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 4% 0 4% 0%;
+  width: 100vw;
+
+  h1 {
+    padding: 0 15px 0 15px;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+
+    color: #ab2727;
+    border-bottom: 1.5px solid #000000;
+  }
+}
+
+.image-layout {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
+  padding: 0 20% 0 20%;
+  margin-bottom: 30px;
+
+  .images {
+    display: inline-block;
   }
 
-    .content {
+  img {
+    width: 15vw;
+    height: auto;
+  }
+}
+
+#know-btn {
+  width: 100vw;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 5% 5% auto;
+  padding: 0 2% 0 % 0;
+
+  #know-team-button {
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+
+    width: auto;
+
+    padding: 5px 5px 5px 5px;
+    background-color: #ab2727;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  #know-team-button:hover {
+    background-color: #721e1e;
+    transition: 500ms;
+    transform: scale(1.1);
+  }
+
+  #know-team-button::after {
+    content: " ->";
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  height: auto;
+  background-color: #d1d1d1;
+  padding: 5px 0 5px 0;
+
+  #fibrasul-logo {
+    margin-left: 10px;
+    width: 120px;
+    height: auto;
+  }
+
+  .icon {
+    width: 20px;
+    height: auto;
+  }
+
+  .contatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 20px;
+
+    .email-content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    .telefone-content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    .contact-a {
+      text-decoration: none;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+
+      color: #000000;
+    }
+
+    .contact-a:hover {
+      color: #284f69;
+      transition: 250ms;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    .header-items {
+      font-size: 14px;
+    }
+  }
+
+  .main {
+    .main-logo-text {
+      margin-bottom: 5px;
+      #img-logo {
+        width: 30vw;
+      }
+      #h2-subtitle {
+        font-size: 1.2rem;
+      }
+    }
+
+    #carousel-main {
+      height: auto;
+
+      .btn {
+        top: 35%;
+
+        #btn-img {
+          width: 70px;
+          height: auto;
+        }
+      }
+
+      #carousel-items {
+        .carousel-content {
+          height: 300px;
+        }
+      }
+    }
+
+    #main-content {
+      flex-direction: column;
+
+      #main-aboutUs {
+        padding: 0 15px 0 15px;
+        width: 100vw;
+        margin: 0 0 20px 0;
+      }
+
+      #main-data {
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        margin: 0px;
 
-        margin: 4% 0 4% 0%;
-        width: 100vw;
-
-        h1 {
-          padding: 0 15px 0 15px;
-          font-family: 'Rajdhani', sans-serif;
-          font-size: 55px;
-          font-weight: 700;
-
-          color:#AB2727;
-          border-bottom: 1.5px solid #000000;
-        }
-    }
-
-    .image-layout {
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 5%;
-      padding: 0 20% 0 20%;
-      margin-bottom: 30px;  
-
-     .images {
-       display: inline-block
-     }
-
-     img {
-       width: 15vw;
-       height: auto;
-     }
-   }
-
-   #know-btn {
-    width: 100vw;
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 0 5% 5% auto;
-    padding: 0 2% 0 % 0;
-
-
-    #know-team-button {
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      color: #FFFFFF;
-
-      width: auto;
-
-      padding: 5px 5px 5px 5px;
-      background-color: #AB2727;
-      border: 1px solid #000000;
-      border-radius: 10px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-
-    #know-team-button:hover {
-      background-color: #721e1e;
-      transition: 500ms;
-      transform: scale(1.1);
-    }
-
-    #know-team-button::after {
-      content: " ->";
-
-    }
-   }
-
-
-
-    footer {
-      display: flex;
-      justify-content:space-between;
-
-      width: 100%;
-      height: auto;
-      background-color: #D1D1D1;
-      padding: 5px 0 5px 0;
-
-      #fibrasul-logo {
-        margin-left: 10px;
-        width: 120px;
-        height: auto;
-      }
-
-      .icon {
-        width: 20px;
-        height: auto;
-      }
-
-      .contatos {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        margin-right: 20px;
-
-        .email-content {
+        .highlights {
+          width: 70%;
           display: flex;
           justify-content: center;
-          align-items: flex-start;
-          gap: 4px;
+          flex-wrap: wrap;
+          padding: 0 20px 20px 20px;
+          gap: 30px 60px;
         }
 
-        .telefone-content {
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          gap: 4px;
+        #services-div-button {
+          width: 80%;
+          height: auto;
         }
-
-        .contact-a {
-          text-decoration: none;
-          font-family: 'Inter', sans-serif;
-          font-size: 12px;
-          font-weight: 600;
-
-          color: #000000;
-          }
-
-          .contact-a:hover {
-            color: #284f69;
-            transition: 250ms;
-          }
+      }
     }
-   
+    #know-btn {
+      width: 50%;
+      #know-team-button {
+        font-size: 16px;
+      }
+    }
   }
+}
 
-  @media  (max-width: 830px) {
-    .header {
-      display: none;
+@media (max-width: 750px) {
+  .header {
+    display: none;
+  }
+  .main {
+    .main-logo-text {
+      #h2-subtitle {
+        font-size: 0.95rem;
+      }
     }
-
-    .main {
-      .main-logo-text {
-        margin-bottom: 5px;
-          #img-logo {
-            width: 30vw;
-          }
-          #h2-subtitle {
-            font-size: 1rem;
-        }
-      }
-
-      #carousel-main {
-        height: auto;
-
-          .btn {
-            top: 25%;
-            
-            #btn-img {
-              width: 60px;
-              height: auto;
-            }
-          }
-
-        #carousel-items {
-          .carousel-content {
-            height: 200px;
-           }
-        }
-      }
-      #main-content {
-        #main-aboutUs {
-          .main-aboutUs-content {
-            .title {
-              font-size: 2rem;
-            }
-  
-            .img {
-              width: 35px;
-            }
-  
-            .text {
-              font-size: 0.9rem;
-            }
-          }
-        }
-          #main-data {
-              gap: 5px;
-                #first-line-content {
-                .data-text {
-                  font-size: 1.5rem;
-                }
-                
-                .img {
-                  width: 30px;
-                  height: auto
-                }
-  
-                .text {
-                  font-size: 0.7rem;
-                }
-              }
-                #second-line-content {
-                  .data-text {
-                    font-size: 3rem;
-                  }
-  
-                  .img {
-                    width: 50px;
-                    height: auto
-                  }
-  
-                  .text {
-                    font-size: 0.8rem;
-                  }
-                }
-  
-                #services-div-button {
-                  #services-button {
-                    font-size: 0.5rem;
-                    padding: 0 2px 0 2px;
-                    height: 8vh;
-                  }
-                }
-            }
-          }
-          .content {
-            h1 {
-              font-size: 2rem;
-            }
-          }
-
-          .image-layout {
-            
-            img {
-              width: 200px;
-              height: auto
-            }
-          }
-          #know-btn {
-            #know-team-button {
-              font-size: 9px;
-            }
-          }
-        }
-
-        footer {
-          .contatos {
-            margin-top: 10px;
-            img {
-              width: 5%;
-              height: auto
-            }
-            
-          }
-        }
-      }
-      
-
-
-  @media  (max-width: 530px) {
-
     #main-content {
       #main-aboutUs {
         .main-aboutUs-content {
+          margin-bottom: 5 px;
+          .title {
+            font-size: 30px;
+          }
+          .text {
+            font-size: 16px;
+            text-align: center;
+          }
+        }
+      }
+      #main-data {
+        .highlights {
+          width: 80%;
+          gap: 15px 15px;
+          padding: 0;
+          .container {
+            .number-text {
+              font-size: 40px;
+            }
 
+            .bottom-text {
+              font-size: 10px;
+            }
+
+            &.specific3 {
+              .bottom-text,
+              .top-text {
+                font-size: 12px;
+              }
+
+              .bottom-text {
+                bottom: 7px;
+              }
+
+              .number-text {
+                font-size: 60px;
+              }
+
+              .plus {
+                font-size: 75px;
+              }
+            }
+          }
+        }
+
+        #services-div-button {
+          width: 90%;
+          margin-top: 10px;
+
+          #services-button {
+            font-size: 14px;
+          }
         }
       }
     }
+    .content {
+      h1 {
+        font-size: 35px;
+      }
+    }
 
+    .image-layout {
+      padding: 0 10% 0 10%;
+      img {
+        width: 140px;
+      }
+    }
+
+    #know-btn {
+      width: 50%;
+      #know-team-button {
+        font-size: 12px;
+      }
+    }
   }
 
+  footer {
+    #fibrasul-logo {
+      width: 90px;
+    }
+    .icon {
+      width: 15px;
+    }
+    .contatos {
+      .contact-a {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+}

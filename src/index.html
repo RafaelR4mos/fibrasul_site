@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="FibrasulRS manutenções industriais">
     <title>FibrasulRS</title>
-    <link rel="icon" href="../assets/fibrasul-favicon.png">
+    <link rel="icon" href="../assets/icons/fibrasul-favicon.png">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -29,11 +29,11 @@
         <div id="carousel-main">
 
             <button class="btn" id="btnL">
-                <img id="btn-img" src="../assets/arrow-button.svg" alt="Botão voltar">
+                <img id="btn-img" src="../assets/icons/arrow-icon.svg" alt="Botão voltar">
             </button>
 
             <button class="btn" id="btnR">
-                <img id="btn-img" src="../assets/arrow-button.svg" alt="Botão prosseguir">
+                <img id="btn-img" src="../assets/icons/arrow-icon.svg" alt="Botão prosseguir">
             </button>
 
             <div id="carousel-items">
@@ -60,7 +60,7 @@
             <div id="main-aboutUs">
                 <div class="main-aboutUs-content">
                     <h1 class="title">Quem somos nós</h1>
-                    <img class="img" src="../assets/gear-icon.svg" alt="icone de engrenagem">
+                    <img class="img" src="../assets/icons/gear-icon.svg" alt="icone de engrenagem">
 
                     <p class="text">Somos especializados no trabalho em que oferecemos, buscando constantemente padrões
                         de
@@ -71,10 +71,7 @@
             </div>
 
             <div id="main-data">
-
                 <div class="highlights"></div>
-
-
                 <div id="services-div-button">
                     <button id="services-button">SAIBA MAIS SOBRE SERVIÇOS</button>
                 </div>
@@ -90,13 +87,12 @@
             <div class="images"><img src="../assets/stihl-logo.png" alt="stihl logo"></div>
             <div class="images"><img src="../assets/cmpc-logo.png" alt="cmpc logo"></div>
             <div class="images"><img src="../assets/gm-logo.png" alt="gm logo"></div>
-            <div class="images"><img id="toyota-logo" src="../assets/toyota-logo.png" alt="toyota logo"></div>
+            <div class="images"><img src="../assets/toyota-logo.png" alt="toyota logo"></div>
         </div>
 
         <div id="know-btn">
             <button id="know-team-button">CONHEÇA NOSSA INFRAESTRUTURA E EQUIPE</button>
         </div>
-
     </main>
 
     <footer classname="footer">
@@ -104,7 +100,7 @@
 
         <div class="contatos">
             <div class="email-content">
-                <img class="icon" src="../assets/email-icon.svg" alt="e-mail icone">
+                <img class="icon" src="../assets/icons/email-icon.svg" alt="e-mail icone">
 
                 <a class="contact-a" href="mailto:contato@fibrasulrs.com" target="_blank">
                     contato@fibrasulrs.com
@@ -112,115 +108,16 @@
             </div>
 
             <div class="telefone-content">
-                <img class="icon" src="../assets/telefone-icon.svg" alt="telefone icone">
+                <img class="icon" src="../assets/icons/telefone-icon.svg" alt="telefone icone">
 
                 <a class="contact-a" href="tel:51981375450" target="_blank">
                     (51) 9 8137-5450
                 </a>
-
-
             </div>
         </div>
     </footer>
 
-    <script>
-        const highlightsData = [
-
-            {
-                topText: "DIAS SEM ACIDENTES OU",
-                bottomText: "INCIDENTES NO TRABALHO",
-                number: 1200,
-                icon: "shield-icon",
-
-            },
-            {
-                topText: "FUNCIONÁRIOS",
-                bottomText: "QUALIFICADOS",
-                number: 50,
-                icon: "quality-icon"
-            },
-            {
-
-                topText: "MACRO E MICRO",
-                bottomText: "SERVIÇOS REALIZADOS",
-                number: 150,
-                icon: "job-icon",
-                extraClasses: ["bigger"]
-            }
-        ]
-        const imagesAmount = document.querySelectorAll(".carousel-content").length;
-        let images;
-        let imagesPosition = 0;
-        let touchStart, touchEnd;
-
-        async function fetchHtmlAsText(url) {
-            return await (await fetch(url)).text();
-        }
-
-        async function loadHighlights(index, data) {
-            let hl = document.createElement('div');
-            hl.innerHTML = await fetchHtmlAsText("highlight.html");
-            hl.classList.add("container");
-            hl.classList.add("item-" + index);
-            hl.querySelector(".container .top-text").innerHTML = data.topText;
-            hl.querySelector(".container .number-text").innerHTML = data.number;
-            hl.querySelector(".container .bottom-text").innerHTML = data.bottomText;
-            hl.querySelector(".container .logo").innerHTML = '<img src="../assets/' + data.icon + '.svg" alt="">';
-            if (data.extraClasses && data.extraClasses.length > 0) {
-                for (let i = 0; i < data.extraClasses.length; i++) {
-                    hl.classList.add(data.extraClasses[i]);
-                }
-            }
-            document.querySelector('.highlights').appendChild(hl);
-        }
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-            document.documentElement.style.setProperty('--windowWidth', `${(window.innerWidth / 2000) + "s"}`);
-
-            images = document.querySelector('#carousel-items')
-
-            document.querySelector('#btnL').addEventListener("click", () => { move(1) })
-            document.querySelector('#btnR').addEventListener("click", () => { move(-1) })
-            document.querySelector('#carousel-main').addEventListener("touchstart", (event) => { touchStart = Math.floor(event.changedTouches[0].screenX) })
-            document.querySelector('#carousel-main').addEventListener("touchend", (event) => {
-                touchEnd = Math.floor(event.changedTouches[0].screenX);
-                if (touchStart > touchEnd) {
-                    move(-1);
-                } else {
-                    move(1);
-                }
-            });
-
-            for (let i = 0; i < highlightsData.length; i++) {
-                loadHighlights(i + 1, highlightsData[i]);
-
-            }
-
-        });
-
-        window.addEventListener("resize", function () {
-            console.log('resize');
-            document.documentElement.style.setProperty('--windowWidth', `${(window.innerWidth / 2000) + "s"}`);
-            move(0);
-        });
-
-        function move(direction) {
-            const imageW = images.offsetWidth;
-            imagesPosition += direction;
-
-            imagesPosition = (imagesPosition > 0) ? 0 : (Math.abs(imagesPosition) <= (imagesAmount - 1)) ? imagesPosition : -(imagesAmount - 1);
-
-            if (direction == 0) {
-                images.classList.remove('animate');
-            } else {
-                images.classList.add('animate');
-            }
-
-            images.style.transform = "translateX(" + imagesPosition * imageW + "px)";
-
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
