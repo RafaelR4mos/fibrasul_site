@@ -360,7 +360,7 @@ body {
 
     width: auto;
 
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px;
     background-color: #ab2727;
     border: 1px solid #000000;
     border-radius: 10px;
@@ -616,4 +616,135 @@ footer {
 }
 
 @media (max-width: 530px) {
+  .main {
+    .main-logo-text {
+      #img-logo {
+        width: calc(30vw + 30px);
+      }
+      #h2-subtitle {
+        font-size: 0.6rem;
+      }
+    }
+
+    #carousel-main {
+      .btn {
+        top: 75px;
+        width: auto;
+        height: auto;
+
+        #btn-img {
+          width: 45px;
+        }
+      }
+      #carousel-items {
+        .carousel-content {
+          height: 200px;
+        }
+      }
+    }
+    #main-content {
+      #main-aboutUs {
+        .main-aboutUs-content {
+          .title {
+            font-size: 25px;
+          }
+          .text {
+            font-size: 14px;
+          }
+          .img {
+            width: 35px;
+          }
+        }
+      }
+
+      #main-data {
+        .highlights {
+          padding: 0 5px;
+          width: 100%;
+          gap: 10px 5px;
+
+          .container {
+            .plus {
+              font-size: 50px;
+            }
+            .number-text {
+              font-size: 30px;
+            }
+
+            .bottom-text {
+              bottom: 0;
+              font-size: 8px;
+            }
+
+            img {
+              width: 35px;
+            }
+
+            &.specific1 {
+              .bottom-text {
+                bottom: -3px;
+              }
+            }
+
+            &.specific2 {
+              .bottom-text {
+                bottom: 7px;
+              }
+            }
+
+            &.specific3 {
+              .plus {
+                font-size: 60px;
+              }
+              .number-text {
+                font-size: 40px;
+              }
+              .bottom-text,
+              .top-text {
+                font-size: 10px;
+              }
+
+              .bottom-text {
+                bottom: 8px;
+              }
+              img {
+                width: 40px;
+              }
+            }
+          }
+        }
+        #services-div-button {
+          #services-button {
+            font-size: 9px;
+          }
+        }
+      }
+    }
+
+    .image-layout {
+      img {
+        width: 90px;
+      }
+    }
+
+    #know-btn {
+      #know-team-button {
+        font-size: 8px;
+      }
+    }
+    .content {
+      h1 {
+        font-size: 20px;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  footer {
+    .contatos {
+      .contact-a {
+        font-size: 8px;
+      }
+    }
+  }
 }
