@@ -7,9 +7,9 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
-
+ 
 html,
 body {
   max-width: 100vw;
@@ -164,10 +164,13 @@ body {
       }
 
       .text {
+        padding: 0px 15px;
         font-family: "Inter";
         font-size: 20px;
         font-weight: 500;
-        text-align: justify;
+        text-align: center;
+        line-height: 30px;
+        
 
         color: #000000;
       }
@@ -224,7 +227,7 @@ body {
 
           color: #000000;
         }
-
+        
         .top-text {
           top: 10px;
           left: 0px;
@@ -246,17 +249,29 @@ body {
 
         &.specific2 {
           padding: 0 25px 0;
+          
         }
 
         &.specific3 {
+          width: 100%;
           padding: 0 20px 0 20px;
+          justify-content: center;
+
           .number-text {
             font-size: 65px;
             margin-right: 10px;
           }
+
           .top-text,
           .bottom-text {
             font-size: 14px;
+          }
+
+          .top-text {
+            margin-left: 35%;
+          }
+          .bottom-text {
+            margin-right: 35%;
           }
 
           .plus {
@@ -622,7 +637,7 @@ footer {
         width: calc(30vw + 30px);
       }
       #h2-subtitle {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
       }
     }
 
@@ -649,10 +664,11 @@ footer {
             font-size: 25px;
           }
           .text {
-            font-size: 14px;
+            font-size: 12px;
+            line-height: 20px;
           }
           .img {
-            width: 35px;
+            width: 30px;
           }
         }
       }
@@ -704,8 +720,13 @@ footer {
                 font-size: 10px;
               }
 
+              .top-text {
+                margin-left: 30%;
+              }
+
               .bottom-text {
                 bottom: 8px;
+                margin-right: 25%;
               }
               img {
                 width: 40px;
