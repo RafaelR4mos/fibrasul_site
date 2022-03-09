@@ -25,7 +25,8 @@ const highlightsData = [
     }
 ]
 
-
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 const imagesAmount = document.querySelectorAll(".carousel-content").length;
 let images;
 let imagesPosition = 0;
@@ -52,6 +53,9 @@ async function loadHighlights(index, data) {
     document.querySelector('.highlights').appendChild(hl);
 }
 
+toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+})
 
 document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.style.setProperty('--windowWidth', `${(window.innerWidth / 2000) + "s"}`);
@@ -72,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let i = 0; i < highlightsData.length; i++) {
         loadHighlights(i + 1, highlightsData[i]);
-
     }
 });
 
