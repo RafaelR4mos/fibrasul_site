@@ -1,0 +1,71 @@
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-title {
+  padding: 0 30px;
+  margin-top: 10px;
+  font-family: "Rajdhani";
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 3px solid #000000;
+
+  color: #ab2727;
+}
+
+.main-content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-col {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: left;
+
+  width: fit-content;
+  padding: 0 20px 0 0;
+  border-bottom: 2px solid #000000;
+  color: #ab2727;
+}
+
+a,
+span {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+
+  color: black;
+}
+
+.contatos {
+  display: flex;
+}
+
+.email-container,
+.cellphone-container,
+.address-container {
+  margin: 0 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.address-container {
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+}
