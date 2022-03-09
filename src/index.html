@@ -8,21 +8,31 @@
     <title>FibrasulRS</title>
     <link rel="icon" href="../assets/icons/fibrasul-favicon.png">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
     <header class="header">
         <nav>
-            <a class="header-items" href="#">Home</a>
-            <a class="header-items" href="#">Serviços</a>
-            <a class="header-items" href="#">Infraestrutura</a>
-            <a class="header-items" href="#">Contato</a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <img id="logo-header" src="../assets/fibrasul-logo.svg" alt="Logo da FibrasulRS">
+
+            <ul>
+                <li><a class="header-items" id="active" href="#">Home</a></li>
+                <li><a class="header-items" href="#">Serviços</a></li>
+                <li><a class="header-items" href="#">Infraestrutura</a></li>
+                <li><a class="header-items" href="#">Contato</a></li>
+            </ul>
+
         </nav>
     </header>
 
     <main class="main">
         <div class="main-logo-text">
-            <img id="img-logo" main-fibrasul-logo" src="../assets/fibrasul-logo.svg" alt="Logo da FibrasulRS">
+            <img id="img-logo" class="main-fibrasul-logo" src="../assets/fibrasul-logo.svg" alt="Logo da FibrasulRS">
             <h2 id="h2-subtitle">HÁ 8 ANOS GARANTINDO QUALIDADE E SEGURANÇA NOS SERVIÇOS PRESTADOS</h2>
         </div>
 
