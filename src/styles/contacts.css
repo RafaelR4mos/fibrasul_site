@@ -7,12 +7,12 @@ header .navbar {
 }
 
 header .brand-title img {
-  width: 300px;
+  width: 220px;
 }
 
 header .navbar h1 {
   font-family: "Rajdhani", sans-serif;
-  font-size: 60px;
+  font-size: 45px;
   font-weight: 700;
   text-transform: uppercase;
 
@@ -20,7 +20,7 @@ header .navbar h1 {
 }
 
 .navbar-links ul li a {
-  font-size: 24px;
+  font-size: 20px;
   color: #000000;
   font-weight: 700;
 }
@@ -112,6 +112,5 @@ span {
 }
 
 footer {
-  position: absolute;
-  bottom: 0px;
+  height: 8vh;
 }
