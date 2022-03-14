@@ -1,23 +1,44 @@
-.title-container {
+header .navbar {
+  max-width: 1920px;
+  width: 100vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 20vh;
+  background: rgba(66, 61, 98, 0.17);
 }
 
-.main-title {
-  padding: 0 30px;
-  margin-top: 10px;
-  font-family: "Rajdhani";
-  font-size: 45px;
+header .brand-title img {
+  width: 300px;
+}
+
+header .navbar h1 {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 60px;
   font-weight: 700;
   text-transform: uppercase;
-  border-bottom: 3px solid #000000;
 
   color: #ab2727;
 }
 
+.navbar-links ul li a {
+  font-size: 24px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.navbar-links ul li a:hover {
+  color: #fff;
+  transition: 500ms;
+}
+
+.fibrasul-logo {
+  width: 200px;
+  height: auto;
+}
+
 .main-content {
-  margin-top: 50px;
+  padding: 80px 60px;
+  width: 100vw;
+  height: 72vh;
   display: flex;
   justify-content: space-between;
 }
@@ -44,25 +65,50 @@ a,
 span {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 22px;
 
   color: black;
+}
+
+.email-container,
+.cellphone-container,
+.address-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cellphone-container,
+.email-container {
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.cellphone-container span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cellphone-container strong {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  background: #ab2727;
+  border-radius: 25px;
+  padding: 8px;
 }
 
 .contatos {
   display: flex;
 }
 
-.email-container,
-.cellphone-container,
-.address-container {
-  margin: 0 55px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.rs-flag {
+  width: 40px;
+  height: auto;
 }
 
-.address-container {
+.wpp-icon {
+  font-size: 40px;
 }
 
 footer {

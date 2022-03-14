@@ -12,28 +12,29 @@
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="brand-title">
-      <a href="/src/index.html">FibrasulRS</a>
-    </div>
-    <a href="#" class="toggle-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
-    <div class="navbar-links">
-      <ul>
-        <li><a href="/src/index.html">Home</a></li>
-        <li><a href="#">Infraestrutura</a></li>
-        <li><a href="services.html">Serviços</a></li>
-        <li><a href="contacts.html">Contatos</a></li>
-      </ul>
-    </div>
-  </nav>
-  <div class="title-container">
-    <!-- <img class="fibrasul-logo" src="../assets/fibrasul-logo.svg" alt="logo da fibrasul"> -->
-    <h1 class="main-title">Infraestrutura e Equipe</h1>
-  </div>
+  <header>
+    <nav class="navbar">
+
+      <div class="brand-title">
+        <a href="../src/index.html"><img src="../assets/fibrasul-logo.png" alt="logo da fibrasul"></a>
+      </div>
+
+      <h1 class="main-title">Infraestrutura e Equipe</h1>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="../src/index.html">Home</a></li>
+          <li><a href="#">Infraestrutura</a></li>
+          <li><a href="services.html">Serviços</a></li>
+          <li><a href="contacts.html">Contatos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <main class="main-container">
     <div class="team">
@@ -61,21 +62,20 @@
     </div>
   </main>
 
+
   <footer classname="footer">
-    <img id="fibrasul-logo" src="../assets/fibrasul-logo.svg">
+    <img id="fibrasul-logo" src="../assets/fibrasul-logo.png">
 
     <div class="contatos">
       <div class="email-content">
-        <img class="icon" src="../assets/icons/email-icon.svg" alt="e-mail icone">
-
+        <ion-icon name="mail-outline"></ion-icon>
         <a class="contact-a" href="mailto:contato@fibrasulrs.com" target="_blank">
           contato@fibrasulrs.com
         </a>
       </div>
 
       <div class="telefone-content">
-        <img class="icon" src="../assets/icons/telefone-icon.svg" alt="telefone icone">
-
+        <ion-icon name="call-outline"></ion-icon>
         <a class="contact-a" href="tel:51981375450" target="_blank">
           (51) 9 8137-5450
         </a>
@@ -83,7 +83,8 @@
     </div>
   </footer>
 
-  <script src="../src/scripts.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

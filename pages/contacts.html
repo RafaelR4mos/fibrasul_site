@@ -12,29 +12,27 @@
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="brand-title">
-      <a href="/src/index.html">FibrasulRS</a>
-    </div>
-    <a href="#" class="toggle-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
-    <div class="navbar-links">
-      <ul>
-        <li><a href="/src/index.html">Home</a></li>
-        <li><a href="infrastructure.html">Infraestrutura</a></li>
-        <li><a href="services.html">Serviços</a></li>
-        <li><a href="contacts.html">Contatos</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="title-container">
-    <!-- <img class="fibrasul-logo" src="../assets/fibrasul-logo.svg" alt="logo da fibrasul"> -->
-    <h1 class="main-title">Contate-nos!</h1>
-  </div>
+  <header>
+    <nav class="navbar">
+      <div class="brand-title">
+        <a href="../src/index.html"><img src="../assets/fibrasul-logo.png" alt="logo da fibrasul"></a>
+      </div>
+      <h1>contate-nos</h1>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="../src/index.html">Home</a></li>
+          <li><a href="infrastructure.html">Infraestrutura</a></li>
+          <li><a href="services.html">Serviços</a></li>
+          <li><a href="#">Contatos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <div class="main-content">
     <div class="first-col">
@@ -46,8 +44,18 @@
 
       <div class="cellphone-container">
         <h2>Telefones:</h2>
-        <span>(51) 98137-5450</span>
-        <span>(51) 98314-2681</span>
+        <span>
+          <img class="rs-flag" src="../assets/icons/rs_flag-icon.png" alt="icone da bandeira do rio grande do sul">
+          (51) 98137-5450
+          <ion-icon class="wpp-icon" name="logo-whatsapp"></ion-icon>
+          <strong id="twenty-four">24h</strong>
+        </span>
+        <span>
+          <img class="rs-flag" src="../assets/icons/rs_flag-icon.png" alt="icone da bandeira do rio grande do sul">
+          (51) 98314-2681
+          <ion-icon class="wpp-icon" name="logo-whatsapp"></ion-icon>
+          <strong>RH</strong>
+        </span>
       </div>
     </div>
 
@@ -58,21 +66,20 @@
     </div>
   </div>
 
+
   <footer classname="footer">
-    <img id="fibrasul-logo" src="../assets/fibrasul-logo.svg">
+    <img id="fibrasul-logo" src="../assets/fibrasul-logo.png">
 
     <div class="contatos">
       <div class="email-content">
-        <img class="icon" src="../assets/icons/email-icon.svg" alt="e-mail icone">
-
+        <ion-icon name="mail-outline"></ion-icon>
         <a class="contact-a" href="mailto:contato@fibrasulrs.com" target="_blank">
           contato@fibrasulrs.com
         </a>
       </div>
 
       <div class="telefone-content">
-        <img class="icon" src="../assets/icons/telefone-icon.svg" alt="telefone icone">
-
+        <ion-icon name="call-outline"></ion-icon>
         <a class="contact-a" href="tel:51981375450" target="_blank">
           (51) 9 8137-5450
         </a>
@@ -80,7 +87,8 @@
     </div>
   </footer>
 
-  <script src="../src/scripts.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

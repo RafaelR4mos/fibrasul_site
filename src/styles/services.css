@@ -1,0 +1,39 @@
+header .navbar {
+  max-width: 1920px;
+  background: none;
+}
+
+.navbar a img {
+  width: 250px;
+}
+
+header .navbar-links ul li a {
+  font-family: "Inter";
+  font-weight: 800;
+  font-size: 24px;
+
+  color: #a2a2a2;
+}
+
+.navbar-links ul li:hover {
+  background: none;
+}
+
+.navbar-links ul li a:hover {
+  transition: 500ms;
+  color: #7c7c7c;
+}
+
+.main-title {
+  font-family: "Rajdhani";
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: #ab2727;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+}

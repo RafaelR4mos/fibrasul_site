@@ -11,24 +11,27 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="brand-title">
-            <a href="#">FibrasulRS</a>
-        </div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="../pages/infrastructure.html">Infraestrutura</a></li>
-                <li><a href="../pages/services.html">Serviços</a></li>
-                <li><a href="../pages/contacts.html">Contatos</a></li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <div class="brand-title">
+                <a href="#">FibrasulRS</a>
+            </div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="../pages/infrastructure.html">Infraestrutura</a></li>
+                    <li><a href="../pages/services.html">Serviços</a></li>
+                    <li><a href="../pages/contacts.html">Contatos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
 
     <main class="main">
         <div class="main-logo-text">
@@ -37,18 +40,13 @@
         </div>
 
         <div id="carousel-main">
+            <div class="btn" id="btnL">
+                <ion-icon id="btn-img" name="chevron-back-outline"></ion-icon>
+            </div>
 
-
-            <button class="btn" id="btnL">
-                <img id="btn-img" src="../assets/icons/arrow-icon.svg" alt="Botão voltar">
-            </button>
-
-
-            <button class="btn" id="btnR">
-                <img id="btn-img" src="../assets/icons/arrow-icon.svg" alt="Botão prosseguir">
-            </button>
-
-
+            <div class="btn" id="btnR">
+                <ion-icon id="btn-img" name="chevron-forward-outline"></ion-icon>
+            </div>
 
             <div id="carousel-items">
                 <div class="carousel-content"><img class="carousel-images"
@@ -70,64 +68,102 @@
             </div>
         </div>
 
-        <div id="main-content">
+        <section class="first-section">
             <div id="main-aboutUs">
                 <div class="main-aboutUs-content">
                     <h1 class="title">Quem somos nós</h1>
-                    <img class="img" src="../assets/icons/gear-icon.svg" alt="icone de engrenagem">
+                    <ion-icon class="img" name="settings-outline"></ion-icon>
 
-                    <p class="text">Somos especializados no trabalho em que oferecemos, buscando constantemente padrões
+                    <p class="text">Somos especializados no trabalho em que oferecemos, buscando constantemente
+                        padrões
                         de
                         excelência
                         quanto a questões de segurança para com os nossos colaboradores, além de, processos e demais
-                        trabalhos envolvidos no ramo. Entendemos que o elemento humano é o nosso maior patrimônio.</p>
+                        trabalhos envolvidos no ramo. Entendemos que o elemento humano é o nosso maior patrimônio.
+                    </p>
                 </div>
             </div>
 
             <div id="main-data">
-                <div class="highlights"></div>
-                <div id="services-div-button">
-                    <button id="services-button">
+                <div class="main-data-content">
+
+                    <div class="first-group-container">
+                        <div class="data-containers">
+                            <span>
+                                <strong>+</strong>
+                                1200
+                                <ion-icon class="data-img" name="ribbon-outline"></ion-icon>
+                            </span>
+                            <p>
+                                Dias sem acidentes/incidentes no trabalho
+                            </p>
+                        </div>
+
+                        <div class="data-containers">
+                            <span>
+                                <strong>+</strong>
+                                50
+                                <ion-icon class="data-img" name="people-outline"></ion-icon>
+                            </span>
+                            <p>
+                                Funcionários qualificados
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="data-containers" id="data-specific">
+                        <span>
+                            <strong>+</strong>
+                            150
+                            <ion-icon class="data-img" name="construct-outline"></ion-icon>
+                        </span>
+                        <p>
+                            Macro e micro serviços realizados
+                        </p>
+                    </div>
+
+                    <div id="services-div-button">
                         <a href="../pages/services.html"> SAIBA MAIS SOBRE SERVIÇOS</a>
-                    </button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="content">
-            <h1 classe="title">Com quem já trabalhamos</h1>
-        </div>
 
-        <div class="image-layout">
-            <div class="images"><img src="../assets/valmet-logo.png" alt="valmet logo"></div>
-            <div class="images"><img src="../assets/stihl-logo.png" alt="stihl logo"></div>
-            <div class="images"><img src="../assets/cmpc-logo.png" alt="cmpc logo"></div>
-            <div class="images"><img src="../assets/gm-logo.png" alt="gm logo"></div>
-            <div class="images"><img src="../assets/toyota-logo.png" alt="toyota logo"></div>
-        </div>
+        <section class="second-section">
+            <div>
+                <h1 classe="title">Com quem já trabalhamos</h1>
+            </div>
 
-        <div id="know-btn">
-            <button id="know-team-button">
+            <div class="image-layout">
+                <div class="images"><img src="../assets/valmet-logo.png" alt="valmet logo"></div>
+                <div class="images"><img src="../assets/stihl-logo.png" alt="stihl logo"></div>
+                <div class="images"><img src="../assets/cmpc-logo.png" alt="cmpc logo"></div>
+                <div class="images"><img src="../assets/gm-logo.png" alt="gm logo"></div>
+                <div class="images"><img src="../assets/toyota-logo.png" alt="toyota logo"></div>
+            </div>
+
+            <div id="know-btn">
                 <a href="../pages/infrastructure.html">CONHEÇA NOSSA INFRAESTRUTURA E EQUIPE</a>
-            </button>
-        </div>
+            </div>
+
+        </section>
     </main>
 
     <footer classname="footer">
-        <img id="fibrasul-logo" src="../assets/fibrasul-logo.svg">
+        <img id="fibrasul-logo" src="../assets/fibrasul-logo.png">
 
         <div class="contatos">
             <div class="email-content">
-                <img class="icon" src="../assets/icons/email-icon.svg" alt="e-mail icone">
-
+                <ion-icon name="mail-outline"></ion-icon>
                 <a class="contact-a" href="mailto:contato@fibrasulrs.com" target="_blank">
                     contato@fibrasulrs.com
                 </a>
             </div>
 
             <div class="telefone-content">
-                <img class="icon" src="../assets/icons/telefone-icon.svg" alt="telefone icone">
-
+                <ion-icon name="call-outline"></ion-icon>
                 <a class="contact-a" href="tel:51981375450" target="_blank">
                     (51) 9 8137-5450
                 </a>
@@ -135,6 +171,8 @@
         </div>
     </footer>
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="scripts.js"></script>
 </body>
 
