@@ -15,9 +15,8 @@
   <header>
     <nav class="navbar">
       <div class="brand-title">
-        <a href="../src/index.html"><img src="../assets/fibrasul-logo.png" alt="logo da fibrasul"></a>
+        <a href="#">FibrasulRS</a>
       </div>
-      <h1>contate-nos</h1>
       <a href="#" class="toggle-button">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -34,37 +33,48 @@
     </nav>
   </header>
 
-  <div class="main-content">
-    <div class="first-col">
-      <div class="email-container">
-        <h2>Email:</h2>
-        <a href="mailto:contato@fibrasulrs.com" target="_blank">contato@fibrasulrs.com </a>
-        <a href="mailto:sand@fibrasulrs.com" target="_blank">sand@fibrasulrs.com</a>
-      </div>
-
-      <div class="cellphone-container">
-        <h2>Telefones:</h2>
-        <span>
-          <img class="rs-flag" src="../assets/icons/rs_flag-icon.png" alt="icone da bandeira do rio grande do sul">
-          (51) 98137-5450
-          <ion-icon class="wpp-icon" name="logo-whatsapp"></ion-icon>
-          <strong id="twenty-four">24h</strong>
-        </span>
-        <span>
-          <img class="rs-flag" src="../assets/icons/rs_flag-icon.png" alt="icone da bandeira do rio grande do sul">
-          (51) 98314-2681
-          <ion-icon class="wpp-icon" name="logo-whatsapp"></ion-icon>
-          <strong>RH</strong>
-        </span>
-      </div>
+  <main class="contacts-main ">
+    <div class="title-container">
+      <h1 class="title">contate-nos!</h1>
     </div>
 
-    <div class="address-container">
-      <h2>Venha nos visitar!</h2>
-      <span>Endereço</span>
-      <img src="" alt="">
+    <div class="main-content">
+      <div class="first-col">
+        <div class="email-container">
+          <h2>Email:</h2>
+          <a href="mailto:contato@fibrasulrs.com" target="_blank">contato@fibrasulrs.com </a>
+          <a href="mailto:sand@fibrasulrs.com" target="_blank">sand@fibrasulrs.com</a>
+        </div>
+
+        <div class="cellphone-container">
+          <h2>Telefones:</h2>
+          <span>
+            <img class="rs-flag" src="../assets/icons/rs_flag-icon.png" alt="icone da bandeira do rio grande do sul">
+            (51) 98137-5450
+            <ion-icon class="wpp-icon" name="logo-whatsapp"></ion-icon>
+            <strong id="twenty-four">24h</strong>
+          </span>
+          <span>
+            <img class="rs-flag" src="../assets/icons/rs_flag-icon.png" alt="icone da bandeira do rio grande do sul">
+            (51) 98314-2681
+            <ion-icon class="wpp-icon" name="logo-whatsapp"></ion-icon>
+            <strong>RH</strong>
+          </span>
+        </div>
+      </div>
+
+      <div class="address-container">
+        <h2>Venha nos visitar!</h2>
+        <span class="address">Endereço:</span>
+        <div class="map-wrapper">
+          <iframe class="googlemap"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13802.414620100504!2d-51.3168754!3d-30.1341529!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8550b3739e5ba4d2!2sCMPC!5e0!3m2!1spt-BR!2sbr!4v1647365474738!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
     </div>
-  </div>
+  </main>
 
 
   <footer classname="footer">
@@ -89,6 +99,7 @@
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="../src/scripts.js"></script>
 </body>
 
 </html>

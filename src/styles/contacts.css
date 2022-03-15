@@ -1,44 +1,25 @@
-header .navbar {
-  max-width: 1920px;
-  width: 100vw;
+.contacts-main {
+  padding: 60px 0 20px 0;
+}
+
+.title-container {
   display: flex;
-  height: 20vh;
-  background: rgba(66, 61, 98, 0.17);
+  justify-content: center;
 }
 
-header .brand-title img {
-  width: 220px;
-}
-
-header .navbar h1 {
+.title {
   font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
   font-size: 45px;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  color: #ab2727;
-}
-
-.navbar-links ul li a {
-  font-size: 20px;
-  color: #000000;
-  font-weight: 700;
-}
-
-.navbar-links ul li a:hover {
+  padding: 5px 40px;
+  background-color: #ab2727;
   color: #fff;
-  transition: 500ms;
+  border-radius: 40px;
+  text-transform: uppercase;
 }
-
-.fibrasul-logo {
-  width: 200px;
-  height: auto;
-}
-
 .main-content {
-  padding: 80px 60px;
+  padding: 50px 80px;
   width: 100vw;
-  height: 72vh;
   display: flex;
   justify-content: space-between;
 }
@@ -61,8 +42,8 @@ h2 {
   color: #ab2727;
 }
 
-a,
-span {
+.main-content a,
+.main-content span {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 22px;
@@ -111,6 +92,22 @@ span {
   font-size: 40px;
 }
 
+.address {
+  padding: 10px 0 5px 0;
+}
+
+.map-wrapper {
+  padding: 10px 0;
+  width: 500px;
+  max-width: 700px;
+}
+
+.googlemap {
+  width: 100%;
+}
+
 footer {
-  height: 8vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

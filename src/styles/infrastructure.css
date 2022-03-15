@@ -1,81 +1,58 @@
-header .navbar {
-  max-width: 1920px;
-  background: none;
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
 }
 
-.navbar a img {
-  width: 220px;
-}
-
-header .navbar-links ul li a {
-  font-family: "Inter";
-  font-weight: 800;
-  font-size: 18px;
-
-  color: #a2a2a2;
-}
-
-.navbar-links ul li:hover {
-  background: none;
-}
-
-.navbar-links ul li a:hover {
-  transition: 500ms;
-  color: #7c7c7c;
-}
-
-.main-title {
-  font-family: "Rajdhani";
-  font-size: 35px;
+.contacts-title {
+  font-family: "Rajdhani", sans-serif;
   font-weight: 700;
+  font-size: 45px;
   text-transform: uppercase;
 
   color: #ab2727;
 }
 
-.main-container {
+.infraestrutura-section,
+.team-section {
+  padding: 40px 0;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.team,
-.infrastructure {
-  display: flex;
-  padding: 35px 0;
-  margin-left: 35px;
-}
-
-.team-content,
-.infrastructure-content {
-  width: 100vw;
+.text-container {
+  width: 600px;
+  height: 300px;
+  gap: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
-}
-
-.main-h2 {
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-  text-transform: uppercase;
-
-  color: #423d62;
-  margin-bottom: 10px;
-}
-
-.main-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
   text-align: justify;
 }
 
-.main-img {
-  width: 35vw;
-  height: auto;
+.subtitle {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+
+  color: #423d62;
+}
+
+.info-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.firma-imgs {
+  width: 450px;
 }
 
 footer {
-  position: relative;
-  bottom: 0px;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
