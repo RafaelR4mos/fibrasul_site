@@ -1,7 +1,7 @@
 .main-content {
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 40px 40px 0 40px;
 }
 
 .contacts-title {
@@ -51,8 +51,4 @@
 }
 
 footer {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }

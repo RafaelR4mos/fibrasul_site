@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Rajdhani:wght@700&display=swap&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Rajdhani:wght@700&css2?family=Maven+Pro:wght@500;600;700&display=swap&display=swap");
 
 :root {
   --windowWidth: 1.5s;
@@ -128,6 +128,43 @@ header {
     position: relative;
     width: 100vw;
     overflow: hidden;
+
+    #info-btn {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      bottom: 25px;
+
+      z-index: 2;
+
+      button {
+        width: 200px;
+        border: none;
+        padding: 5px 10px;
+        border: 1.5px solid #fff;
+        background-color: transparent;
+
+        p {
+          text-align: center;
+          font-family: "Maven Pro", sans-serif;
+          font-weight: 600;
+          font-size: 18px;
+
+          color: black;
+        }
+      }
+
+      button:hover {
+        border: 1px solid #113149;
+        transition: 500ms;
+      }
+
+      button p:hover {
+        color: #113149;
+        transition: 500ms;
+      }
+    }
 
     #btnL {
       left: 0px;
@@ -402,8 +439,24 @@ footer {
   padding: 5px 10px;
 
   #fibrasul-logo {
-    width: 100px;
+    width: 120px;
     height: auto;
+  }
+
+  .social-media {
+    a {
+      text-decoration: none;
+
+      .linkedin-icon {
+        font-size: 30px;
+        color: #000000;
+      }
+
+      .linkedin-icon:hover {
+        opacity: 75%;
+        transition: 500ms;
+      }
+    }
   }
 
   .contatos {
@@ -456,6 +509,12 @@ footer {
 
     #carousel-main {
       height: auto;
+
+      #info-btn {
+        button {
+          width: 150px;
+        }
+      }
 
       .btn {
         top: 120px;
@@ -565,6 +624,18 @@ footer {
   }
 
   .main {
+    #carousel-main {
+      #info-btn {
+        button {
+          width: 120px;
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
     .main-logo-text {
       #h2-subtitle {
         font-size: 0.95rem;
@@ -634,6 +705,16 @@ footer {
     #fibrasul-logo {
       width: 90px;
     }
+
+    .social-media {
+      a {
+        .linkedin-icon {
+          font-size: 20px;
+          color: #000000;
+        }
+      }
+    }
+
     .icon {
       width: 15px;
     }
@@ -657,6 +738,17 @@ footer {
     }
 
     #carousel-main {
+      #info-btn {
+        button {
+          width: 100px;
+
+          p {
+            white-space: nowrap;
+            font-size: 14px;
+          }
+        }
+      }
+
       .btn {
         top: 75px;
         width: 30px;

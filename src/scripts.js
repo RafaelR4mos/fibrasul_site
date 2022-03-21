@@ -1,14 +1,41 @@
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 const imagesAmount = document.querySelectorAll(".carousel-content").length;
+const infoButton = document.getElementById('info-btn');
+const rightCarouselArrow = document.getElementById('btnR');
+const leftCarouselArrow = document.getElementById('btnL');
+
 let images;
 let imagesPosition = 0;
 let touchStart, touchEnd;
+var arrayPosition = 0;
 
 
 toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
 })
+
+// USED TO CONTROL ARRAY POSITION VALUES
+rightCarouselArrow.addEventListener('click', () => {
+    arrayPosition += 1;
+})
+
+leftCarouselArrow.addEventListener('click', () => {
+    arrayPosition -= 1;
+})
+
+function selectHref() {
+
+    if (arrayPosition == 1) {
+        window.location.href = "../pages/infrastructure.html"
+    }
+
+    else if (arrayPosition == 2) {
+        window.location.href = "../pages/services.html"
+    }
+}
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.style.setProperty('--windowWidth', `${(window.innerWidth / 2000) + "s"}`);
@@ -34,6 +61,8 @@ window.addEventListener("resize", function () {
     move(0);
 });
 
+
+
 function move(direction) {
     const imageW = images.offsetWidth;
     imagesPosition += direction;
@@ -47,5 +76,4 @@ function move(direction) {
     }
 
     images.style.transform = "translateX(" + imagesPosition * imageW + "px)";
-
 }
