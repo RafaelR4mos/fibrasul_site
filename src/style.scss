@@ -151,7 +151,7 @@ header {
           font-weight: 600;
           font-size: 18px;
 
-          color: black;
+          color: #fff;
         }
       }
 
@@ -465,17 +465,11 @@ footer {
     justify-content: center;
     align-items: flex-start;
 
+    .telefone-content,
     .email-content {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      gap: 4px;
-    }
-
-    .telefone-content {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       gap: 4px;
     }
 
@@ -625,6 +619,10 @@ footer {
 
   .main {
     #carousel-main {
+      .btn {
+        display: none;
+      }
+
       #info-btn {
         button {
           width: 120px;
@@ -675,6 +673,9 @@ footer {
               font-size: 12px;
             }
           }
+          #services-div-button a:hover {
+            transform: none;
+          }
         }
       }
     }
@@ -697,6 +698,10 @@ footer {
         a {
           font-size: 11px;
         }
+      }
+
+      #know-btn a:hover {
+        transform: none;
       }
     }
   }
@@ -815,7 +820,7 @@ footer {
           #services-div-button {
             padding-top: 15px;
             a {
-              font-size: 9px;
+              font-size: 7px;
             }
           }
         }
@@ -839,7 +844,7 @@ footer {
 
       #know-btn {
         a {
-          font-size: 9px;
+          font-size: 7px;
         }
       }
     }
@@ -848,6 +853,7 @@ footer {
   footer {
     .contatos {
       .contact-a {
+        text-align: center;
         font-size: 8px;
       }
     }
