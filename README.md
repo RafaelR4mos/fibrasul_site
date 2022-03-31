@@ -2,9 +2,9 @@
 
 ## To do
 <ol> 
-  <li> Colocar o mapa na página contacts</li>
-  <li> Terminar as páginas restantes</li>
-  <li> Adicionar responsividade nas páginas novas  </li>
+  <li> Aguardar fornecimento de conteúdo para dar prosseguimento as próximas páginas</li>
+  <li> Estudar mais sobre responsividade</li>
+  <li> Pensar como manipular informações de serviços específicos</li>
 </ol>
 
 
