@@ -16,7 +16,8 @@
             <div class="brand-title">
                 <a href="#">FibrasulRS</a>
             </div>
-            <a href="#" class="toggle-button">
+            <a href="#" class="toggle-button"
+                aria-label="Icone Hamburguer ativado em telas de celular para mostrar os links das outras páginas do site">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -41,11 +42,13 @@
 
         <div id="carousel-main">
             <div class="btn" id="btnL">
-                <ion-icon id="btn-img" name="chevron-back-outline"></ion-icon>
+                <ion-icon id="btn-img" name="chevron-back-outline"
+                    aria-label="Icone de seta utilizado para retornar uma posição no carrosel"></ion-icon>
             </div>
 
             <div class="btn" id="btnR">
-                <ion-icon id="btn-img" name="chevron-forward-outline"></ion-icon>
+                <ion-icon id="btn-img" name="chevron-forward-outline"
+                    aria-label="Icone de seta utilizado para avançar uma posição no carrosel"></ion-icon>
             </div>
 
             <div id="info-btn">
@@ -54,24 +57,32 @@
                 </button>
             </div>
 
+            <!--Adicionar conteúdo aos "alt" quando as imagens que serão utilizadas, de fato no site estiverem disponíveis-->
             <div id="carousel-items">
-                <div class="carousel-content"><img class="carousel-images"
-                        src="https://unsplash.it/1600/400?image=950" />
+                <div class="carousel-content">
+                    <img class="carousel-images" src="https://unsplash.it/1600/400?image=950" alt="" />
                 </div>
-                <div class="carousel-content"><img class="carousel-images"
-                        src="https://unsplash.it/1600/400?image=930" /></div>
-                <div class="carousel-content"><img class="carousel-images"
-                        src="https://unsplash.it/1600/400?image=990" /></div>
-                <div class="carousel-content"><img class="carousel-images"
-                        src="https://unsplash.it/1600/400?image=980" /></div>
-                <div class="carousel-content"><img class="carousel-images"
-                        src="https://unsplash.it/1600/400?image=970" /></div>
-                <div class="carousel-content"><img class="carousel-images"
-                        src="https://unsplash.it/1600/400?image=976" /></div>
-                <div class="carousel-content"><img class="carousel-images"
-                        src="https://unsplash.it/1600/400?image=993" /></div>
-                <div class="carousel-content"><img class="carousel-images"
-                        src="https://unsplash.it/1600/400?image=969" /></div>
+                <div class="carousel-content">
+                    <img class="carousel-images" src="https://unsplash.it/1600/400?image=930" alt="" />
+                </div>
+                <div class="carousel-content">
+                    <img class="carousel-images" src="https://unsplash.it/1600/400?image=990" alt="" />
+                </div>
+                <div class="carousel-content">
+                    <img class="carousel-images" src="https://unsplash.it/1600/400?image=980" alt="" />
+                </div>
+                <div class="carousel-content">
+                    <img class="carousel-images" src="https://unsplash.it/1600/400?image=970" alt="" />
+                </div>
+                <div class="carousel-content">
+                    <img class="carousel-images" src="https://unsplash.it/1600/400?image=976" alt="" />
+                </div>
+                <div class="carousel-content">
+                    <img class="carousel-images" src="https://unsplash.it/1600/400?image=993" alt="" />
+                </div>
+                <div class="carousel-content">
+                    <img class="carousel-images" src="https://unsplash.it/1600/400?image=969" alt="" />
+                </div>
             </div>
         </div>
 
@@ -79,7 +90,8 @@
             <div id="main-aboutUs">
                 <div class="main-aboutUs-content">
                     <h1 class="title">Quem somos nós</h1>
-                    <ion-icon class="img" name="settings-outline"></ion-icon>
+                    <ion-icon class="img" name="settings-outline" aria-label="Icone com o desenho de uma engrenagem">
+                    </ion-icon>
 
                     <p class="text">Somos especializados no trabalho em que oferecemos, buscando constantemente
                         padrões
@@ -99,7 +111,8 @@
                             <span>
                                 <strong>+</strong>
                                 1200
-                                <ion-icon class="data-img" name="ribbon-outline"></ion-icon>
+                                <ion-icon class="data-img" name="ribbon-outline"
+                                    aria-label="Icone representando qualidade"></ion-icon>
                             </span>
                             <p>
                                 Dias sem acidentes/incidentes
@@ -110,7 +123,8 @@
                             <span>
                                 <strong>+</strong>
                                 50
-                                <ion-icon class="data-img" name="people-outline"></ion-icon>
+                                <ion-icon class="data-img" name="people-outline"
+                                    aria-label="Icone representando pessoas/trabalhadores"></ion-icon>
                             </span>
                             <p>
                                 Funcionários qualificados
@@ -123,7 +137,8 @@
                         <span>
                             <strong>+</strong>
                             150
-                            <ion-icon class="data-img" name="construct-outline"></ion-icon>
+                            <ion-icon class="data-img" name="construct-outline"
+                                aria-label="Icone representando ferramentas"></ion-icon>
                         </span>
                         <p>
                             Macro e micro serviços realizados
@@ -137,24 +152,22 @@
             </div>
         </section>
 
-
         <section class="second-section">
             <div>
                 <h1 classe="title">Com quem já trabalhamos</h1>
             </div>
 
             <div class="image-layout">
-                <div class="images"><img src="../assets/valmet-logo.png" alt="valmet logo"></div>
-                <div class="images"><img src="../assets/stihl-logo.png" alt="stihl logo"></div>
-                <div class="images"><img src="../assets/cmpc-logo.png" alt="cmpc logo"></div>
-                <div class="images"><img src="../assets/gm-logo.png" alt="gm logo"></div>
-                <div class="images"><img src="../assets/toyota-logo.png" alt="toyota logo"></div>
+                <div class="images"><img src="../assets/valmet-logo.png" alt="logo da empresa Valmet"></div>
+                <div class="images"><img src="../assets/stihl-logo.png" alt="logo da empresa Stihl"></div>
+                <div class="images"><img src="../assets/cmpc-logo.png" alt="logo da empresa CMPC"></div>
+                <div class="images"><img src="../assets/gm-logo.png" alt="logo da empresa GM"></div>
+                <div class="images"><img src="../assets/toyota-logo.png" alt="Logo da empresa Toyota"></div>
             </div>
 
             <div id="know-btn">
                 <a href="../pages/infrastructure.html">CONHEÇA NOSSA INFRAESTRUTURA E EQUIPE</a>
             </div>
-
         </section>
     </main>
 
@@ -162,7 +175,8 @@
         <img id="fibrasul-logo" src="../assets/fibrasul-logo.png">
 
         <div class="social-media">
-            <a href="https://www.linkedin.com/in/sand-rafael-5748a2166/" target="_blank">
+            <a href="https://www.linkedin.com/in/sand-rafael-5748a2166/" target="_blank"
+                aria-label="Link com um icone representando a rede social linkedin">
                 <ion-icon class="linkedin-icon" name="logo-linkedin"></ion-icon>
             </a>
         </div>
@@ -170,14 +184,14 @@
 
         <div class="contatos">
             <div class="email-content">
-                <ion-icon name="mail-outline"></ion-icon>
+                <ion-icon name="mail-outline" aria-label="Icone representando o logo de e-mail"></ion-icon>
                 <a class="contact-a" href="mailto:contato@fibrasulrs.com" target="_blank">
                     contato@fibrasulrs.com
                 </a>
             </div>
 
             <div class="telefone-content">
-                <ion-icon name="call-outline"></ion-icon>
+                <ion-icon name="call-outline" aria-label="Icone representando um telefone"></ion-icon>
                 <a class="contact-a" href="tel:51981375450" target="_blank">
                     (51) 9 8137-5450
                 </a>
