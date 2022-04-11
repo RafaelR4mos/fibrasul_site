@@ -51,7 +51,7 @@ header {
 
   .brand-title:hover {
     transition: 500ms;
-    transform: scale(1.1);
+    opacity: 75%;
   }
 
   .navbar-links ul {
@@ -65,8 +65,8 @@ header {
     display: block;
   }
 
-  .navbar-links li:hover {
-    background-color: #555;
+  .navbar-links a:hover {
+    opacity: 75%;
     transition: 0.5s;
   }
 
@@ -156,6 +156,7 @@ header {
       }
 
       button:hover {
+        cursor: pointer;
         border: 1px solid #113149;
         transition: 500ms;
       }
@@ -357,7 +358,6 @@ header {
         a:hover {
           background-color: #721e1e;
           transition: 500ms;
-          transform: scale(1.1);
         }
 
         a::after {
@@ -423,7 +423,6 @@ header {
     a:hover {
       background-color: #721e1e;
       transition: 500ms;
-      transform: scale(1.1);
     }
   }
 }
