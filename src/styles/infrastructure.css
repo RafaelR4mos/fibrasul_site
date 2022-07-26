@@ -1,7 +1,10 @@
 .main-content {
   display: flex;
   flex-direction: column;
-  padding: 60px 40px 0 40px;
+  justify-content: center;
+  width: 100%;
+  
+  margin: 30px 0;
 }
 
 .page-title {
@@ -15,7 +18,8 @@
 }
 
 .page-content {
-  padding: 80px 140px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .page-subtitle {
@@ -30,7 +34,10 @@
 .topics-container {
   padding: 80px 0;
   display: flex;
+  max-width: 1600px;
+  align-items: center;
   justify-content: space-between;
+  gap: 0 50px;
 }
 
 .topics-content {
@@ -38,7 +45,7 @@
   flex-direction: column;
   gap: 30px;
 
-  max-width: 650px;
+  max-width: 50%;
   max-height: 365px;
 }
 
@@ -47,8 +54,10 @@
 }
 
 .topics-img {
-  max-width: 730px;
+  max-width: 50%;
   max-height: 365px;
+
+  height: auto;
 }
 
 .topics-title {
@@ -64,6 +73,7 @@
   border: 2px solid #ab2727;
 }
 
+
 .text {
   width: 100%;
   font-family: "Inter", sans-serif;
@@ -72,4 +82,143 @@
   text-align: justify;
 
   color: #000000;
+}
+
+.infraestrutura {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px 0;
+}
+
+#pan-img {
+  display: none;
+  background-color: #b7b2d8;
+  width: 1200px;
+  height: 200px;
+}
+
+#pan-text {
+  text-align: center;
+}
+
+@media (max-width: 1800px) {
+  .text {
+    font-size: 18px;
+  }
+
+}
+
+@media (max-width: 1500px) {
+  .page-title {
+    font-size: 45px;
+  }
+
+
+  .page-subtitle {
+    font-size: 35px;
+  }
+
+  .topics-title {
+    font-size: 25px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .page-title {
+    font-size: 35px;
+  }
+
+  .page-subtitle {
+    font-size: 25px;
+  }
+
+  .page-content {
+    width: 90%;
+  }
+
+  .topics-title {
+    font-size: 20px;
+  }
+
+  .topics-img {
+    max-width: 60%;
+  }
+
+  .topics-content {
+    gap: 20px;
+  }
+
+  .topics-container {
+    gap: 0 30px;
+  }
+
+  #inverted-container {
+    background-color: azure;
+  }
+
+
+}
+
+@media (max-width: 1000px) {
+
+  .page-subtitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  
+  }
+  
+  .page-content {
+    width: 100%;
+  }
+
+  .topics-container {
+    padding: 40px 0;
+  
+    justify-content: center;
+    gap: 40px 0;
+    flex-wrap: wrap;
+  }
+
+  .topics-content {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  .page-title {
+    font-size: 30px;
+  }
+
+  .line {
+    width: 45px;
+  }
+
+  .page-subtitle {
+    font-size: 18px;
+  }
+
+  .topics-content {
+    max-width: 60%;
+    gap: 15px;
+  }
+
+  .topics-title {
+    font-size: 16px;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+
+  #pan-text {
+    font-size: 10px;
+  }
 }
