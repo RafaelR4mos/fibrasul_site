@@ -1,7 +1,6 @@
+
 .main-content {
-  display: flex;
-  flex-direction: column;
-  padding: 60px 40px 0 40px;
+  padding: 30px;
 }
 
 .page-title {
@@ -9,26 +8,79 @@
   font-weight: 700;
   font-size: 60px;
   text-transform: uppercase;
+  text-align: center;
   margin: 0 auto;
 
   color: #ab2727;
 }
 
-.page-content {
-  padding: 80px 140px;
-}
-
 .page-subtitle {
   font-family: "Rajdhani", sans-serif;
   font-weight: 700;
-  font-size: 45px;
+  font-size: 40px;
 
   color: #615a8a;
   text-transform: uppercase;
 }
 
+
 .line-title {
-  width: 250px;
+  width: 150px;
 
   border: 2px solid #ab2727;
 }
+
+/* Containers */
+
+.page-content, .secondary-page-content {
+  padding: 0 30px;
+  margin: 30px 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0 60px;
+}
+
+.main-content-container, .secondary-content-container {
+  max-width: 500px;  
+  width:min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px 0;
+
+  background-color: aquamarine;
+}
+
+.content-img {
+  max-width: 400px;        
+}
+
+
+.content-btn {
+  width: 30%;
+  font-size: 20px;
+  color: #ffff;
+  background-color: #ab2727;
+}
+
+.project-period {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Secondary Part */
+.secondary-page-content {
+  justify-content: left;
+}
+
+.secondary-content-container, .secondary-content-img  {
+  max-width: 200px;
+}
+
+#secondary-btn {
+  font-size: 14px;
+  width: 40%;
+}
+
