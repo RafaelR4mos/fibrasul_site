@@ -40,6 +40,10 @@
   gap: 0 50px;
 }
 
+#first-topics-container {
+  padding: 60px 0;
+}
+
 .topics-content {
   display: flex;
   flex-direction: column;
@@ -98,6 +102,36 @@
   width: 1200px;
   height: 200px;
 }
+
+.common-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.resources-slogan {
+  display: flex;
+  justify-content: center;
+
+  margin: 20px 0;
+}
+
+.resources-slogan p {
+  font-family: 'Maven Pro'; 
+  font-weight: 700;
+  font-size: 25px;
+
+  color: #ab2727
+}
+
+.resources-galery {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
 
 #pan-text {
   text-align: center;

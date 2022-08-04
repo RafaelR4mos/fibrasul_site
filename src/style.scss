@@ -431,14 +431,16 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px 5px;
+
 
   width: 100%;
   height: 8vh;
   background-color: #d1d1d1;
-  padding: 5px 10px;
 
   #fibrasul-logo {
-    width: 120px;
+    max-width: 90px;
+    width: auto;
     height: auto;
   }
 
@@ -448,7 +450,7 @@ footer {
 
       .linkedin-icon {
         font-size: 30px;
-        color: #000000;
+        color: #0A66C2;
       }
 
       .linkedin-icon:hover {
