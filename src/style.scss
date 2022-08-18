@@ -46,7 +46,7 @@ header {
     text-transform: uppercase;
     font-size: 1.5rem;
     margin: 0.5rem;
-    color: #ffffff;
+    color: #ab2727;
   }
 
   .brand-title:hover {
@@ -142,7 +142,7 @@ header {
         width: 200px;
         border: none;
         padding: 5px 10px;
-        border: 1.5px solid #fff;
+        border: 1.5px solid #d1d1d1;
         background-color: transparent;
 
         p {
@@ -157,14 +157,16 @@ header {
 
       button:hover {
         cursor: pointer;
-        border: 1px solid #113149;
-        transition: 500ms;
+        border: 1.5px solid #ffff;
+        transition: 600ms;
+
+        p {
+          opacity: 80%;
+          transition: 600ms;
+        }
       }
 
-      button p:hover {
-        color: #113149;
-        transition: 500ms;
-      }
+   
     }
 
     #btnL {
@@ -717,6 +719,7 @@ footer {
         .linkedin-icon {
           font-size: 20px;
           color: #000000;
+          color: rgb(10, 102, 194);
         }
       }
     }

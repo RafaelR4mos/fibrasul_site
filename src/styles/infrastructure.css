@@ -58,8 +58,10 @@
 }
 
 .topics-img {
-  max-width: 50%;
+  max-width: 40%;
   max-height: 365px;
+  border: 1.5px solid black;
+  border-radius: 20px;
 
   height: auto;
 }
@@ -124,14 +126,21 @@
 }
 
 .resources-galery {
+  display: flex;
   width: 100%;
+  padding: 20px 40px 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  margin: 40px 0 140px 0;
 }
 
-
+.resources-tools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 #pan-text {
   text-align: center;

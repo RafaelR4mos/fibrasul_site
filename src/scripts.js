@@ -26,13 +26,15 @@ leftCarouselArrow.addEventListener('click', () => {
 
 function selectHref() {
 
-    if (arrayPosition == 1) {
-        window.location.href = "../pages/infrastructure.html"
-    }
+    window.location.href = "../pages/infrastructure.html"
+    //if (arrayPosition == 1) {
+    //      window.location.href = "../pages/infrastructure.html"
+    //}
 
-    else if (arrayPosition == 2) {
-        window.location.href = "../pages/services.html"
-    }
+
+    // else if (arrayPosition == 2) {
+    //     window.location.href = "../pages/services.html"
+    //}
 }
 
 
