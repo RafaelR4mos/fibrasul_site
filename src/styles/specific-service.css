@@ -1,0 +1,30 @@
+.first-content, .second-content {
+    padding: 30px;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+
+.page-header span {
+    padding: 10px;
+    font-family: 'Rajdhani';
+    font-weight: 700;
+    font-size: 18px;
+
+    color: #615A8A;
+}
+
+
+
+.service-title {
+    font-family: 'Rajdhani';
+    font-weight: 700;
+    font-size: 50px;
+    text-align: left;
+
+    color: #AB2727;
+
+}
