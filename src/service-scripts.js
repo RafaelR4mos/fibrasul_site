@@ -53,5 +53,6 @@ const doneserviceImg3 = document.getElementById('done-service-img3').src = doneS
 
 
 
-
-
+function goPage() {
+    window.location.href = "../pages/specific-service1.html";
+}
