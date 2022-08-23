@@ -34,8 +34,13 @@
 
 /* Containers */
 
+.page-content {
+  padding-bottom: 80px; 
+}
+
+
 .page-content, .secondary-page-content {
-  padding: 0 40px;
+  padding: 20px 40px;
   margin: 30px 0;
   max-width: 100%;
   display: flex;
@@ -87,8 +92,12 @@
   text-align: center;
 }
 
-#secondary-title {
+.secondary-title {
   font-size: 16px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
 }
 
 .project-period {
@@ -213,7 +222,7 @@
 
   
 
- #secondary-content-title {
+ .secondary-content-title {
     font-size: 16px;
   }
 

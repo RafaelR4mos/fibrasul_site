@@ -1,3 +1,8 @@
+body {
+  overflow-x: hidden;
+}
+
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -59,11 +64,15 @@
 
 .topics-img {
   max-width: 40%;
-  max-height: 365px;
+  max-height: 298px;
   border: 1.5px solid black;
   border-radius: 20px;
 
   height: auto;
+}
+
+#andaime-img {
+  width: 396.33px;
 }
 
 .topics-title {
@@ -110,6 +119,10 @@
   font-size: 20px;
 }
 
+#pan-text {
+  text-align: center;
+}
+
 .resources-slogan {
   display: flex;
   justify-content: center;
@@ -125,26 +138,18 @@
   color: #ab2727
 }
 
-.resources-galery {
-  display: flex;
+.resources-content {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+}
+
+.resources-img {
   width: 100%;
-  padding: 20px 40px 0 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 40px 0 140px 0;
+  height: 100%;
+  object-fit: cover;
 }
 
-.resources-tools {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#pan-text {
-  text-align: center;
-}
 
 @media (max-width: 1800px) {
   .text {
@@ -169,6 +174,14 @@
 
   .text {
     font-size: 16px;
+  }
+
+  .resources-content {
+    height: 300px;
+  }
+
+  .resources-slogan p {
+    font-size: 20px;
   }
 
 }
@@ -263,5 +276,9 @@
 
   #pan-text {
     font-size: 10px;
+  }
+
+  .resources-slogan p {
+    font-size: 16px;
   }
 }

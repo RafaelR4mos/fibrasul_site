@@ -5,15 +5,19 @@ const infoButton = document.getElementById('info-btn');
 const rightCarouselArrow = document.getElementById('btnR');
 const leftCarouselArrow = document.getElementById('btnL');
 
+
 let images;
 let imagesPosition = 0;
 let touchStart, touchEnd;
 var arrayPosition = 0;
 
 
+
 toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
 })
+
+
 
 // USED TO CONTROL ARRAY POSITION VALUES
 rightCarouselArrow.addEventListener('click', () => {
@@ -23,6 +27,10 @@ rightCarouselArrow.addEventListener('click', () => {
 leftCarouselArrow.addEventListener('click', () => {
     arrayPosition -= 1;
 })
+
+function selectService(getElementById) {
+    console.log(getElementById);
+}
 
 function selectHref() {
 
