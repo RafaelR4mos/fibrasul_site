@@ -1,3 +1,9 @@
+:root {
+  --modal-duration: 1s;
+  --modal-color: #ab2727;
+}
+
+
 
 .main-content {
   padding: 30px 30px 0 30px;
@@ -30,6 +36,7 @@
 
   margin-left: 20px;
   border: 2px solid #ab2727;
+  background-color: #ab2727;
 }
 
 /* Containers */
@@ -130,6 +137,160 @@
   width: 40%;
 }
 
+
+.button {
+  background: #AB2727;
+  padding: 1em 2em;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+.button:hover {
+  background: #790202;
+  transition: 500ms;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: 10% auto;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Inter';
+  padding: 10px 20px;
+  background: #fff;
+}
+
+.modal-body h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+.modal-body h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+.modal-body p {
+  padding: 15px 0;
+  text-align: justify;
+  font-size: 16px;
+  width: 30%;
+}
+
+.modal-information {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.tecnic-information {
+  display: flex;
+  align-self: flex-end;
+  justify-content: right;
+}
+
+.hirer-date {
+  padding: 15px 0;
+  justify-content: space-between;
+  width: 30%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+}
+
+#team {
+  margin-top: 15px;
+}
+
+#fibrasul-logo {
+  width: 15%;
+  margin: auto;
+  display: block;
+}
+
+.organograma {
+  width: 20%;
+}
+
+.line {
+  background-color: #615A8A;
+  margin-top: 3px;
+  width: 50px;
+  border: 2px solid #615A8A;
+}
+
+.modal-footer {
+  background: #d1d1d1;
+  padding: 10px;
+  color: #000;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
 @media (max-width: 1250px) {
 
   .page-title {
@@ -219,8 +380,6 @@
   .secondary-content-btn {
     font-size: 12px;
   }
-
-  
 
  .secondary-content-title {
     font-size: 16px;
