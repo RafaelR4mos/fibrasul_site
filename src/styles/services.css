@@ -154,6 +154,8 @@
   transition: 500ms;
 }
 
+/*MODAL STILIZATIONS*/
+
 .modal {
   display: none;
   position: fixed;
@@ -168,7 +170,7 @@
 
 .modal-content {
   margin: 10% auto;
-  width: 70%;
+  width: 75%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
@@ -192,7 +194,7 @@
   flex-direction: column;
   justify-content: space-between;
   font-family: 'Inter';
-  padding: 10px 20px;
+  padding: 10px 30px;
   background: #fff;
 }
 
@@ -208,11 +210,11 @@
 }
 
 
-.modal-body p {
+.text {
   padding: 15px 0;
   text-align: justify;
   font-size: 16px;
-  width: 30%;
+  width: 40%;
 }
 
 .modal-information {
@@ -221,19 +223,57 @@
   align-items: left;
 }
 
-.tecnic-information {
+.content-containers {
   display: flex;
-  align-self: flex-end;
-  justify-content: right;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px 0;
+}
+
+.img {
+  width: 300px;
+}
+
+.imgDescription {
+  font-weight: 700;
+}
+
+.description {
+  width: 400px;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.responsiblePerson {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.responsibleSecondaryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .hirer-date {
   padding: 15px 0;
   justify-content: space-between;
-  width: 30%;
-  flex-wrap: wrap;
   display: flex;
-  flex-direction: row;
 }
 
 #team {
@@ -246,9 +286,6 @@
   display: block;
 }
 
-.organograma {
-  width: 20%;
-}
 
 .line {
   background-color: #615A8A;
@@ -257,6 +294,25 @@
   border: 2px solid #615A8A;
 }
 
+#red-line {
+  width: 80px;
+  border: 2px solid #AB2727;
+}
+
+#signature-line {
+  border: 1px solid black;
+  width: 220px;
+}
+
+.signature-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 .modal-footer {
   background: #d1d1d1;
   padding: 10px;
@@ -264,6 +320,12 @@
   text-align: center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.modal-footer {
+  color: #615A8A;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
 }
 
 .close {
@@ -290,6 +352,7 @@
 }
 
 
+/*END OF MODAL STILIZATIONS*/
 
 @media (max-width: 1250px) {
 
@@ -315,6 +378,7 @@
     gap: 0 50px;
   }
 }
+
 
 @media (max-width: 950px) {
   
