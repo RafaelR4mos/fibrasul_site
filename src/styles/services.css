@@ -22,10 +22,9 @@
 
 .page-subtitle {
   font-family: "Rajdhani", sans-serif;
-  font-weight: 700;
-  font-size: 35px;
+  font-weight: 800;
+  font-size: 30px;
 
-  margin-left: 20px;
   color: #615a8a;
   text-transform: uppercase;
 }
@@ -34,442 +33,106 @@
 .line-title {
   width: 150px;
 
-  margin-left: 20px;
   border: 2px solid #ab2727;
   background-color: #ab2727;
 }
 
-/* Containers */
-
-.page-content {
-  padding-bottom: 80px; 
-}
-
-
-.page-content, .secondary-page-content {
-  padding: 20px 40px;
-  margin: 30px 0;
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 0 70px;
-}
-
-.main-content-container, .secondary-content-container {
-  max-width: 500px;  
+.page-header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px 0;
-
+  gap: 10px;
+  margin: 0 20px;
 }
-
-.content-img {
-  max-width: 330px;     
-  border-radius: 30px; 
-}
-
-.secondary-content-img {
-  border-radius: 45px;    
-}
-
-
-
-.content-btn {
-  width: 35%;
-  font-size: 18px;
-  color: #ffff;
-  background-color: #ab2727;
-  border: 1.5px solid black;
-  border-radius: 20px;
-
-  cursor: pointer;
-}
-
-.content-btn:hover {
-  opacity: 80%;
-}
-
-.content-title {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  text-align: center;
-}
-
-.secondary-title {
-  font-size: 16px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  text-align: center;
-}
-
-.project-period {
-  display: flex;
-  justify-content: space-between;
-}
-
-.period-text {
-  font-family: 'Inter';
-  font-weight: 600;
-  color: #ffff;
-
-  padding: 5px 5px;
-  background-color: #615A8A;
-  height:min-content;
-  border-radius: 10px;
-}
-
-/* Secondary Part */
-.secondary-page-content {
-  justify-content: left;
-}
-
-.secondary-content-container, .secondary-content-img  {
-  max-width: 250px;
-}
-
-#secondary-btn {
-  font-size: 14px;
-  width: 40%;
-}
-
-
-.button {
-  background: #AB2727;
-  padding: 1em 2em;
-  color: #fff;
-  border: 0;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 700;
-  font-family: 'Inter', sans-serif;
-}
-
-.button:hover {
-  background: #790202;
-  transition: 500ms;
-}
-
-/*MODAL STILIZATIONS*/
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  margin: 10% auto;
-  width: 75%;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
-}
-
-.modal-header h2,
-.modal-footer h3 {
-  margin: 0;
-}
-
-.modal-header {
-  background: var(--modal-color);
-  padding: 15px;
-  color: #fff;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.modal-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-family: 'Inter';
-  padding: 10px 30px;
-  background: #fff;
-}
-
-.modal-body h2 {
-  font-size: 20px;
-  font-weight: 800;
-}
-
-
-.modal-body h3 {
-  font-size: 18px;
-  font-weight: 500;
-}
-
 
 .text {
-  padding: 15px 0;
-  text-align: justify;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
-  width: 40%;
+  font-weight: 400;
+  text-align: justify;
 }
 
-.modal-information {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-}
-
-.content-containers {
-  display: flex;
-  justify-content: space-between;
+#header-text {
   margin-top: 15px;
 }
 
-.img-container {
+/* PROJECTS SECTION */
+
+.current-projects-container, .done-services-container {
   display: flex;
   flex-direction: column;
+
+  margin: 60px 30px;
+  gap: 100px;
+}
+
+.current-projects {
+  display: flex;
+  gap: 40px;
   align-items: center;
-  gap: 10px 0;
 }
 
-.img {
-  width: 300px;
+.current-projects img {
+  width: 330px;
+  height:320px;
+
+  border-radius: 15px;
 }
 
-.imgDescription {
-  font-weight: 700;
-}
-
-.description {
-  width: 400px;
-  font-size: 16px;
-  text-align: justify;
-}
-
-.description-container {
+.project-info {
   display: flex;
   flex-direction: column;
+
   gap: 15px;
 }
 
-
-.responsiblePerson {
+.icons-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.responsibleSecondaryContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.hirer-date {
-  padding: 15px 0;
   justify-content: space-between;
-  display: flex;
-}
-
-#team {
-  margin-top: 15px;
-}
-
-#fibrasul-logo {
-  width: 15%;
-  margin: auto;
-  display: block;
-}
-
-
-.line {
-  background-color: #615A8A;
-  margin-top: 3px;
-  width: 50px;
-  border: 2px solid #615A8A;
-}
-
-#red-line {
-  width: 80px;
-  border: 2px solid #AB2727;
-}
-
-#signature-line {
-  border: 1px solid black;
-  width: 220px;
-}
-
-.signature-container {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-
-
-.modal-footer {
-  background: #d1d1d1;
-  padding: 10px;
-  color: #000;
   text-align: center;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
 }
 
-.modal-footer {
-  color: #615A8A;
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-}
+.project-btn {
+  margin: 0 40px;
+  border-radius: 15px;
+  border: none;
+  padding: 12px;
 
-.close {
-  color: #ccc;
-  float: right;
-  font-size: 30px;
   color: #fff;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: #ab2727;
   cursor: pointer;
 }
 
-@keyframes modalopen {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.project-btn:hover {
+  background-color: #7d1a1a;
+  transform: scale(1.1);
+  transition: all 500ms;
 }
 
 
-/*END OF MODAL STILIZATIONS*/
 
-@media (max-width: 1250px) {
-
-  .page-title {
-    font-size: 45px;
-  }
-
-  .page-subtitle {
-    font-size: 30px
-  }
-
-  .line-title {
-    width: 80px
-  }
-
-
-  .page-content {
-    flex-wrap: wrap;
-    gap: 50px 90px;
-  }
-
-  .secondary-page-content {
-    gap: 0 50px;
-  }
+.project-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
 }
 
+.container-line {
+  margin-top: 20px  ;
+  width: 100%;
+  border: 0.5px solid #5d5d5ed6;
+}
 
-@media (max-width: 950px) {
+.icon {
+  font-size: 25px;
+}
+
+@media (max-width: 1100px) {
   
-  .page-title {
-    font-size: 35px;
-    text-align: center;
-  }
-
-  .line-title {
-    display: none
-  }
-
-  .page-subtitle {
-    font-size: 20px;
-    text-align: center;
-    margin: 0;
-  }
-
-  .period-text {
-    font-size: 16px;
-  }
-
-  .secondary-page-content {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 50px 70px;
-  }
-
-  .secondary-content-img {
-    max-width: 230px;
-  }
-
-  .secondary-content-container {
-    gap: 15px;
-  }
-
 }
 
-@media (max-width: 770px) { 
 
-  .main-content {
-    padding: 15px;
-  }
-  
-  .page-title {
-    font-size: 30px;
-  }
-
-  .page-subtitle {
-    font-size: 20px
-  }
-
-  .content-title {
-    font-size: 18px;
-  }
-
-
-  .content-img {
-    max-width: 280px;
-  }
-
-  .secondary-content-btn {
-    font-size: 12px;
-  }
-
- .secondary-content-title {
-    font-size: 16px;
-  }
-
-  #secondary-btn {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 630px) {
-
-  .page-subtitle {
-    font-size: 18px;
-  }
-
-  .project-period {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .period-text {
-    font-size: 10px
-  }
- }
 
 
