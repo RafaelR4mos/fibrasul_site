@@ -1,15 +1,11 @@
-# fibrasul_site
- 
- ## Design no Figma
- 
- <a href="https://www.figma.com/file/tKucWr3YFeRgjFpEWWAj9E/site_fibrasulrs?node-id=0%3A1" target="_blank"> ▶️ Link </a>
+# WEBSITE FIBRASULRS
+A FIBRASULRS é uma empresa prestadora de serviços de manutenções industriais localizada no complexo da CMPC, em Guaiba/RS.
 
-## To do
-<ol> 
-  <li> Colocar o mapa na página contacts</li>
-  <li> Terminar as páginas restantes</li>
-  <li> Adicionar responsividade nas páginas novas </li>
-</ol>
-
-
+## Motivo do desenvolvimento do site
+A empresa gostaria de expôr um pouco do seu trabalho a fim de buscar clientes e validar todas as suas capacidades como prestadora de serviços, então solicitou o desenvolvimento de um site estático que contivesse informações referente:
+1. Serviços já realizados
+2. Infraestrutura e equipe da empresa
+3. Marcos e conquistas
+4. Meios de contatos
    
+
