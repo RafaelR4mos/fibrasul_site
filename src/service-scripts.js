@@ -5,7 +5,7 @@ let services = [
         text: "Realização de troca e manutenção de tubulações em PRFV (Plástico reforçado com fibra de vidro) para o setores de engenharia e manutenção da fábrica, na área da Planta Química, na fábrica da CMPC, em Guaíba",
         year: "2022",
         period: "00/00/ a 05/09",
-        category: "Manutenção",
+        category: "Engenharia/Manutenção",
         hirer: "CMPC"
     },
     {
@@ -13,7 +13,7 @@ let services = [
         text: "Realocação da turbo bomba, fabricação e instalação de spools e Tie-IN's para a extensão de alimentação da eletrobomba da caldeira de recuperação G1 (Guaíba 1), CMPC",
         year: "2022",
         period: "00/00 a 00/00",
-        category: "Manutenção",
+        category: "Engenharia",
         hirer: "CMPC"
     },
     {
@@ -21,7 +21,15 @@ let services = [
         text: "Criação de uma nova linha de Polpa da G1 para G2 (Fabricação e instalação de spools e instalação de válvulas).",
         year: "2022",
         period: "00/00/0000",
-        category: "Manutenção",
+        category: "Engenharia",
+        hirer: "CMPC"
+    },
+    {
+        name: "TAC 31 - Desvio de Massa",
+        text: " Desvio de massa dos tanques de polpa da G1 para G2 (Fabricação e instalação de Spool´s e Tie-Ins, montagem de andaimes para realização do serviço e instalação de válvulas)",
+        year: "2022",
+        period: "00/00",
+        category: "Engenharia",
         hirer: "CMPC"
     }
 ];
@@ -52,4 +60,6 @@ const serviceHirer2 = document.getElementById('service-hirer2').innerHTML = serv
 const serviceHirer3 = document.getElementById('service-hirer3').innerHTML = services[2].hirer;
 
 
-
+function showAlert() {
+    alert("O conteúdo específico dos serviços ainda não está disponível, porém será disponibilizado em breve no site.")
+}

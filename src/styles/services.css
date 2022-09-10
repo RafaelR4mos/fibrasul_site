@@ -57,7 +57,8 @@
 
 /* PROJECTS SECTION */
 
-.current-projects-container, .done-services-container {
+.current-projects-container,
+.done-services-container {
   display: flex;
   flex-direction: column;
 
@@ -73,7 +74,7 @@
 
 .current-projects img {
   width: 330px;
-  height:320px;
+  height: 320px;
 
   border-radius: 15px;
 }
@@ -120,7 +121,7 @@
 }
 
 .container-line {
-  margin-top: 20px  ;
+  margin-top: 20px;
   width: 100%;
   border: 0.5px solid #5d5d5ed6;
 }
@@ -129,10 +130,82 @@
   font-size: 25px;
 }
 
-@media (max-width: 1100px) {
-  
+@media (max-width: 1070px) {
+  .icon-container {
+    display: none;
+  }
+
+  .icons-container {
+    justify-content: flex-end;
+  }
+
+  .project-btn {
+    margin: 0;
+  }
 }
 
+@media (max-width: 700px) {
+  .page-title {
+    font-size: 35px;
+  }
+
+  .line-title {
+    display: none;
+  }
+
+  .page-subtitle {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  #header-text {
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+
+    text-align: center;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .current-projects-container {
+    margin: 30px 0;
+    gap: 60px;
+  }
+
+  .current-projects {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .current-projects {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  #cp-blue {
+    background-color: azure;
+  }
+
+  .project-info {
+    display: flex;
+    align-items: center;
+  }
 
 
+  .project-title {
+    text-align: center;
+  }
 
+  .project-btn:hover {
+    transform: none;
+  }
+
+  .current-projects img {
+    margin-top: 20px;
+    width: 200px;
+    height: auto;
+  }
+}
