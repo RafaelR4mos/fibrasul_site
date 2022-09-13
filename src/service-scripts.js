@@ -38,26 +38,32 @@ let services = [
 const serviceName1 = document.getElementById('service-name1').innerHTML = services[0].name;
 const serviceName2 = document.getElementById('service-name2').innerHTML = services[1].name;
 const serviceName3 = document.getElementById('service-name3').innerHTML = services[2].name;
+const serviceName4 = document.getElementById('service-name4').innerHTML = services[3].name;
 
 const serviceText1 = document.getElementById('project-text1').innerHTML = services[0].text;
 const serviceText2 = document.getElementById('project-text2').innerHTML = services[1].text;
 const serviceText3 = document.getElementById('project-text3').innerHTML = services[2].text;
+const serviceText4 = document.getElementById('project-text4').innerHTML = services[3].text;
 
 const serviceDate1 = document.getElementById('service-year1').innerHTML = services[0].year;
 const serviceDate2 = document.getElementById('service-year2').innerHTML = services[1].year;
 const serviceDate3 = document.getElementById('service-year3').innerHTML = services[2].year;
+const serviceDate4 = document.getElementById('service-year4').innerHTML = services[3].year;
 
 const servicePeriod1 = document.getElementById('service-period1').innerHTML = services[0].period;
 const servicePeriod2 = document.getElementById('service-period2').innerHTML = services[1].period;
 const servicePeriod3 = document.getElementById('service-period3').innerHTML = services[2].period;
+const servicePeriod4 = document.getElementById('service-period4').innerHTML = services[3].period;
 
 const serviceCategory1 = document.getElementById('service-category1').innerHTML = services[0].category;
 const serviceCategory2 = document.getElementById('service-category2').innerHTML = services[1].category;
 const serviceCategory3 = document.getElementById('service-category3').innerHTML = services[2].category;
+const serviceCategory4 = document.getElementById('service-category4').innerHTML = services[3].category;
 
 const serviceHirer1 = document.getElementById('service-hirer1').innerHTML = services[0].hirer;
 const serviceHirer2 = document.getElementById('service-hirer2').innerHTML = services[1].hirer;
 const serviceHirer3 = document.getElementById('service-hirer3').innerHTML = services[2].hirer;
+const serviceHirer4 = document.getElementById('service-hirer4').innerHTML = services[3].hirer;
 
 
 function showAlert() {
