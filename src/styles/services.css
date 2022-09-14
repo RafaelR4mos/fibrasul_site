@@ -73,8 +73,8 @@
 }
 
 .current-projects img {
-  width: 330px;
-  height: 320px;
+  width: 340px;
+  height: 280px;
 
   border-radius: 15px;
 }
@@ -84,6 +84,10 @@
   flex-direction: column;
 
   gap: 15px;
+}
+
+#service-period {
+  display: none;
 }
 
 .icons-container {

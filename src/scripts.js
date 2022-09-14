@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 window.addEventListener("resize", function () {
     console.log('resize');
     document.documentElement.style.setProperty('--windowWidth', `${(window.innerWidth / 2000) + "s"}`);
