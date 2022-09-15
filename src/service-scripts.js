@@ -5,7 +5,7 @@ let services = [
         text: "Realização de troca e manutenção de tubulações em PRFV (Plástico reforçado com fibra de vidro) para o setores de engenharia e manutenção da fábrica, na área da Planta Química, na fábrica da CMPC, em Guaíba",
         year: "2022",
         //period: "00/00 a 05/09",
-        category: "Engenharia/Manutenção",
+        category: "Engenharia",
         hirer: "CMPC"
     },
     {

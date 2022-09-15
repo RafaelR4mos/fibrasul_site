@@ -1,0 +1,668 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Rajdhani:wght@700&css2?family=Maven+Pro:wght@500;600;700&display=swap&display=swap");
+:root {
+  --windowWidth: 1.5s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+}
+header .navbar {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+}
+header .brand-title a {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+header .brand-title:hover {
+  transition: 500ms;
+  opacity: 75%;
+}
+header .navbar-links ul {
+  display: flex;
+}
+header .navbar-links li a {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  padding: 16px;
+  display: block;
+}
+header .navbar-links a:hover {
+  opacity: 75%;
+  transition: 0.5s;
+}
+header .toggle-button {
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+header .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+header .toggle-button:hover {
+  transform: scale(1.1);
+  transition: 500ms;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .main-logo-text {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main .main-logo-text #img-logo {
+  padding: 20px 0;
+  width: 35vw;
+  height: auto;
+}
+.main .main-logo-text #h2-subtitle {
+  padding: 0 0 15px 0;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #615a8a;
+}
+.main #carousel-main {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+.main #carousel-main #info-btn {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 25px;
+  z-index: 2;
+}
+.main #carousel-main #info-btn button {
+  width: 200px;
+  border: none;
+  padding: 5px 10px;
+  border: 1.5px solid #d1d1d1;
+  background-color: transparent;
+}
+.main #carousel-main #info-btn button p {
+  text-align: center;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+}
+.main #carousel-main #info-btn button:hover {
+  cursor: pointer;
+  border: 1.5px solid white;
+  transition: 600ms;
+}
+.main #carousel-main #info-btn button:hover p {
+  opacity: 80%;
+  transition: 600ms;
+}
+.main #carousel-main #btnL {
+  left: 0px;
+  margin-left: 20px;
+}
+.main #carousel-main #btnR {
+  right: 0px;
+  margin-right: 20px;
+}
+.main #carousel-main .btn {
+  position: absolute;
+  top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: auto;
+  background: #fff;
+  border-radius: 60px;
+  z-index: 2;
+  cursor: pointer;
+}
+.main #carousel-main .btn #btn-img {
+  display: flex;
+  font-size: 50px;
+}
+.main #carousel-main .btn:hover {
+  color: #fff;
+  background-color: #1b547a;
+  transition: 500ms;
+}
+.main #carousel-main .animate {
+  transition-duration: var(--windowWidth);
+}
+.main #carousel-main #carousel-items {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.main #carousel-main #carousel-items .carousel-content {
+  flex: none;
+  width: 100%;
+  height: 400px;
+  scroll-snap-align: start;
+  z-index: 1;
+}
+.main #carousel-main #carousel-items .carousel-images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main #carousel-main #carousel-items #andaime-img {
+  transform: rotate(90);
+}
+
+.first-section {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  padding: 40px 30px;
+}
+.first-section #main-aboutUs {
+  width: 50vw;
+  border-right: 1px solid #000000;
+}
+.first-section #main-aboutUs .main-aboutUs-content {
+  padding: 0 30px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.first-section #main-aboutUs .main-aboutUs-content .title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #ab2727;
+}
+.first-section #main-aboutUs .main-aboutUs-content .img {
+  font-size: 45px;
+}
+.first-section #main-aboutUs .main-aboutUs-content .text {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 30px;
+  color: #000000;
+}
+.first-section #main-data {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 30px;
+}
+.first-section #main-data .main-data-content {
+  padding: 20px 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.first-section #main-data .main-data-content .first-group-container {
+  display: flex;
+}
+.first-section #main-data .main-data-content .data-containers {
+  width: 50%;
+  gap: 0 20px;
+  font-size: 16px;
+}
+.first-section #main-data .main-data-content .data-containers span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  color: #423d62;
+}
+.first-section #main-data .main-data-content .data-containers span .data-img {
+  font-size: 50px;
+}
+.first-section #main-data .main-data-content .data-containers p {
+  font-family: "Inter", sans-serif;
+}
+.first-section #main-data .main-data-content #data-specific {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.first-section #main-data .main-data-content #data-specific span {
+  font-size: 55px;
+}
+.first-section #main-data .main-data-content #data-specific p {
+  font-size: 18px;
+}
+.first-section #main-data .main-data-content #services-div-button {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 20px 0 0;
+}
+.first-section #main-data .main-data-content #services-div-button a {
+  padding: 5px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: #ab2727;
+  border-radius: 20px;
+  color: #fff;
+}
+.first-section #main-data .main-data-content #services-div-button a:hover {
+  background-color: #721e1e;
+  transition: 500ms;
+}
+.first-section #main-data .main-data-content #services-div-button a::after {
+  content: " ->";
+}
+
+.second-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.second-section h1 {
+  padding: 0 15px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 55px;
+  font-weight: 700;
+  color: #ab2727;
+  border-bottom: 1.5px solid #000000;
+}
+.second-section .image-layout {
+  width: 60%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 50px;
+}
+.second-section .image-layout img {
+  width: 15vw;
+  height: auto;
+}
+.second-section #know-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 15px 50px 30px 0;
+}
+.second-section #know-btn a {
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #ab2727;
+  border-radius: 10px;
+  padding: 5px;
+}
+.second-section #know-btn a::after {
+  content: " ->";
+}
+.second-section #know-btn a:hover {
+  background-color: #721e1e;
+  transition: 500ms;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  width: 100%;
+  height: 8vh;
+  background-color: #d1d1d1;
+}
+footer #fibrasul-logo {
+  max-width: 90px;
+  width: auto;
+  height: auto;
+}
+footer .social-media a {
+  text-decoration: none;
+}
+footer .social-media a .linkedin-icon {
+  font-size: 30px;
+  color: #0A66C2;
+}
+footer .social-media a .linkedin-icon:hover {
+  opacity: 75%;
+  transition: 500ms;
+}
+footer .contatos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+footer .contatos .telefone-content,
+footer .contatos .email-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+footer .contatos .contact-a {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #000000;
+}
+footer .contatos .contact-a:hover {
+  color: #284f69;
+  transition: 250ms;
+}
+
+@media (max-width: 999px) {
+  .main .main-logo-text {
+    margin-bottom: 5px;
+  }
+  .main .main-logo-text #img-logo {
+    width: 30vw;
+  }
+  .main .main-logo-text #h2-subtitle {
+    font-size: 1.2rem;
+  }
+  .main #carousel-main {
+    height: auto;
+  }
+  .main #carousel-main #info-btn button {
+    width: 150px;
+  }
+  .main #carousel-main .btn {
+    top: 120px;
+  }
+  .main #carousel-main #carousel-items .carousel-content {
+    height: 300px;
+  }
+  .main .first-section {
+    flex-direction: column;
+  }
+  .main .first-section #main-aboutUs {
+    padding-bottom: 40px;
+    width: 100%;
+    border: none;
+  }
+  .main .first-section #main-aboutUs .main-aboutUs-content {
+    padding: 0;
+  }
+  .main .first-section #main-data {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+  }
+  .main .first-section #main-data .main-data-content #services-div-button {
+    padding-right: 30px;
+  }
+  .main .first-section #main-data .main-data-content #services-div-button a {
+    font-size: 14px;
+  }
+  .main .second-section h1 {
+    font-size: 40px;
+  }
+  .main .second-section #know-btn a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 750px) {
+  header {
+    justify-content: center;
+  }
+  header .navbar {
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  header .navbar .toggle-button {
+    display: flex;
+    position: absolute;
+    top: 18px;
+  }
+  header .navbar li a {
+    font-size: 14px;
+  }
+  .navbar-links {
+    width: 100%;
+    display: none;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    margin-top: 5px;
+    width: 100%;
+    flex-direction: column;
+    border-top: 4px solid rgb(87, 87, 87);
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    padding: 0.7rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .main #carousel-main .btn {
+    display: none;
+  }
+  .main #carousel-main #info-btn button {
+    width: 120px;
+  }
+  .main #carousel-main #info-btn button p {
+    font-size: 16px;
+  }
+  .main .main-logo-text #h2-subtitle {
+    font-size: 0.95rem;
+  }
+  .main .first-section {
+    padding: 25px 20px;
+  }
+  .main .first-section #main-aboutUs {
+    padding-bottom: 20px;
+  }
+  .main .first-section #main-aboutUs .main-aboutUs-content {
+    gap: 10px;
+  }
+  .main .first-section #main-aboutUs .main-aboutUs-content .title {
+    font-size: 30px;
+  }
+  .main .first-section #main-aboutUs .main-aboutUs-content .text {
+    font-size: 16px;
+    text-align: center;
+  }
+  .main .first-section #main-aboutUs .main-aboutUs-content .img {
+    font-size: 30px;
+  }
+  .main .first-section #main-data .main-data-content .data-containers {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .main .first-section #main-data .main-data-content #services-div-button {
+    padding-right: 20px;
+  }
+  .main .first-section #main-data .main-data-content #services-div-button a {
+    font-size: 12px;
+  }
+  .main .first-section #main-data .main-data-content #services-div-button a:hover {
+    transform: none;
+  }
+  .main .second-section h1 {
+    font-size: 25px;
+  }
+  .main .second-section .image-layout {
+    width: 70%;
+    gap: 0 50px;
+  }
+  .main .second-section .image-layout img {
+    width: 100px;
+  }
+  .main .second-section #know-btn {
+    padding: 20px 20px 20px 0;
+  }
+  .main .second-section #know-btn a {
+    font-size: 11px;
+  }
+  .main .second-section #know-btn a:hover {
+    transform: none;
+  }
+  footer #fibrasul-logo {
+    width: 90px;
+  }
+  footer .social-media a .linkedin-icon {
+    font-size: 20px;
+    color: #000000;
+    color: rgb(10, 102, 194);
+  }
+  footer .icon {
+    width: 15px;
+  }
+  footer .contatos .contact-a {
+    font-size: 10px;
+  }
+}
+@media (max-width: 530px) {
+  .main .main-logo-text #img-logo {
+    width: calc(30vw + 30px);
+  }
+  .main .main-logo-text #h2-subtitle {
+    font-size: 0.65rem;
+  }
+  .main #carousel-main #info-btn button {
+    width: 100px;
+  }
+  .main #carousel-main #info-btn button p {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .main #carousel-main .btn {
+    top: 75px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+  }
+  .main #carousel-main .btn #btn-img {
+    font-size: 30px;
+  }
+  .main #carousel-main #carousel-items .carousel-content {
+    height: 200px;
+  }
+  .main .first-section #main-aboutUs .main-aboutUs-content .title {
+    font-size: 25px;
+  }
+  .main .first-section #main-aboutUs .main-aboutUs-content .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .main .first-section #main-aboutUs .main-aboutUs-content .img {
+    width: 25px;
+  }
+  .main .first-section #main-data .main-data-content .data-containers span {
+    font-size: 30px;
+    gap: 5px;
+  }
+  .main .first-section #main-data .main-data-content .data-containers p {
+    font-size: 11px;
+  }
+  .main .first-section #main-data .main-data-content .data-containers .data-img {
+    font-size: 35px;
+  }
+  .main .first-section #main-data .main-data-content #data-specific span {
+    font-size: 40px;
+  }
+  .main .first-section #main-data .main-data-content #data-specific p {
+    font-size: 14px;
+  }
+  .main .first-section #main-data .main-data-content #data-specific .data-img {
+    font-size: 45px;
+  }
+  .main .first-section #main-data .main-data-content #services-div-button {
+    padding-top: 15px;
+  }
+  .main .first-section #main-data .main-data-content #services-div-button a {
+    font-size: 7px;
+  }
+  .main .second-section h1 {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+  .main .second-section .image-layout {
+    gap: 0 20px;
+    width: 80%;
+  }
+  .main .second-section .image-layout img {
+    width: 80px;
+  }
+  .main .second-section #know-btn a {
+    font-size: 7px;
+  }
+  footer .contatos .contact-a {
+    text-align: center;
+    font-size: 8px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

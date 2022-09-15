@@ -7,7 +7,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
 
   margin: 30px 0;
 }
@@ -23,7 +22,8 @@ body {
 }
 
 .page-content {
-  width: 80%;
+  width: 100%;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
@@ -37,42 +37,33 @@ body {
 }
 
 .topics-container {
-  padding: 80px 0;
   display: flex;
-  max-width: 1600px;
-  align-items: center;
   justify-content: space-between;
-  gap: 0 50px;
+  align-items: center;
+  padding: 40px 0;
+  display: flex;
+  width: 100%;
 }
 
-#first-topics-container {
-  padding: 60px 0;
-}
 
 .topics-content {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 30px 0;
 
-  max-width: 50%;
-  max-height: 365px;
-}
-
-#inverted-container {
-  flex-direction: row-reverse;
+  max-height: 400px;
 }
 
 .topics-img {
-  max-width: 40%;
-  max-height: 298px;
-  border: 1.5px solid black;
-  border-radius: 20px;
-
+  width: 400px;
   height: auto;
+
+  border-radius: 15px;
 }
 
 #andaime-img {
-  width: 396.33px;
+  width: 400px;
+  max-height: 320px;
 }
 
 .topics-title {
@@ -91,7 +82,7 @@ body {
 
 
 .text {
-  width: 100%;
+  width: 95%;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 20px;

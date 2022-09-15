@@ -7,7 +7,7 @@
   <meta name="description" content="FibrasulRS manutenções industriais">
   <title>FibrasulRS</title>
   <link rel="icon" href="../assets/icons/fibrasul-favicon.png">
-  <link rel="stylesheet" type="text/css" href="../src/style.css">
+  <link rel="stylesheet" type="text/css" href="../style.css">
   <link rel="stylesheet" type="text/css" href="../src/styles/services.css">
 </head>
 
@@ -15,7 +15,7 @@
   <header>
     <nav class="navbar">
       <div class="brand-title">
-        <a href="../src/index.html">FibrasulRS</a>
+        <a href="../index.html">FibrasulRS</a>
       </div>
       <a href="#" class="toggle-button">
         <span class="bar"></span>
@@ -24,7 +24,7 @@
       </a>
       <div class="navbar-links">
         <ul>
-          <li><a href="../src/index.html">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="../pages/infrastructure.html">Infraestrutura</a></li>
           <li><a href="#">Serviços</a></li>
           <li><a href="contacts.html">Contatos</a></li>
@@ -57,38 +57,42 @@
 
           <!--Icons-->
           <div class="icons-container">
-            <div class="icon-container">
-              <ion-icon class="icon" name="calendar"></ion-icon>
-              <div class="icon-info">
-                <h4>Ano</h4>
-                <p id="service-year1"></p>
+            <div class="just-icons">
+              <div class="icon-container">
+                <ion-icon class="icon" name="calendar"></ion-icon>
+                <div class="icon-info">
+                  <h4>Ano</h4>
+                  <p id="service-year1"></p>
+                </div>
+              </div>
+              <div id="service-period" class="icon-container">
+                <ion-icon class="icon" name="time"></ion-icon>
+                <div class="icon-info">
+                  <h4>Período</h4>
+                  <p id="service-period1"></p>
+                </div>
+              </div>
+              <div class="icon-container">
+                <ion-icon class="icon" name="people"></ion-icon>
+                <div class="icon-info">
+                  <h4>Contratante</h4>
+                  <p id="service-hirer1"></p>
+                </div>
+              </div>
+              <div class="icon-container">
+                <ion-icon class="icon" name="briefcase"></ion-icon>
+                <div class="icon-info">
+                  <h4>Categoria</h4>
+                  <p id="service-category1"></p>
+                </div>
               </div>
             </div>
-            <div id="service-period" class="icon-container">
-              <ion-icon class="icon" name="time"></ion-icon>
-              <div class="icon-info">
-                <h4>Período</h4>
-                <p id="service-period1"></p>
-              </div>
-            </div>
-            <div class="icon-container">
-              <ion-icon class="icon" name="people"></ion-icon>
-              <div class="icon-info">
-                <h4>Contratante</h4>
-                <p id="service-hirer1"></p>
-              </div>
-            </div>
-            <div class="icon-container">
-              <ion-icon class="icon" name="briefcase"></ion-icon>
-              <div class="icon-info">
-                <h4>Categoria</h4>
-                <p id="service-category1"></p>
-              </div>
+            <div class="service-btn-container">
+              <button onclick="showAlert()" class="project-btn">
+                SAIBA MAIS
+              </button>
             </div>
 
-            <button onclick="showAlert()" class="project-btn">
-              SAIBA MAIS
-            </button>
           </div>
         </div>
       </div>
@@ -103,35 +107,36 @@
 
           <!--Icons-->
           <div class="icons-container">
-            <div class="icon-container">
-              <ion-icon class="icon" name="calendar"></ion-icon>
-              <div class="icon-info">
-                <h4>Ano</h4>
-                <p id="service-year2"></p>
+            <div class="just-icons">
+              <div class="icon-container">
+                <ion-icon class="icon" name="calendar"></ion-icon>
+                <div class="icon-info">
+                  <h4>Ano</h4>
+                  <p id="service-year2"></p>
+                </div>
+              </div>
+              <div id="service-period" class="icon-container">
+                <ion-icon class="icon" name="time"></ion-icon>
+                <div class="icon-info">
+                  <h4>Período</h4>
+                  <p id="service-period2">00/00/22 a 00/00/22</p>
+                </div>
+              </div>
+              <div class="icon-container">
+                <ion-icon class="icon" name="people"></ion-icon>
+                <div class="icon-info">
+                  <h4>Contratante</h4>
+                  <p id="service-hirer2"></p>
+                </div>
+              </div>
+              <div class="icon-container">
+                <ion-icon class="icon" name="briefcase"></ion-icon>
+                <div class="icon-info">
+                  <h4>Categoria</h4>
+                  <p id="service-category2"></p>
+                </div>
               </div>
             </div>
-            <div id="service-period" class="icon-container">
-              <ion-icon class="icon" name="time"></ion-icon>
-              <div class="icon-info">
-                <h4>Período</h4>
-                <p id="service-period2">00/00/22 a 00/00/22</p>
-              </div>
-            </div>
-            <div class="icon-container">
-              <ion-icon class="icon" name="people"></ion-icon>
-              <div class="icon-info">
-                <h4>Contratante</h4>
-                <p id="service-hirer2"></p>
-              </div>
-            </div>
-            <div class="icon-container">
-              <ion-icon class="icon" name="briefcase"></ion-icon>
-              <div class="icon-info">
-                <h4>Categoria</h4>
-                <p id="service-category2"></p>
-              </div>
-            </div>
-
             <button onclick="showAlert()" class="project-btn">
               SAIBA MAIS
             </button>
@@ -149,35 +154,36 @@
 
           <!--Icons-->
           <div class="icons-container">
-            <div class="icon-container">
-              <ion-icon class="icon" name="calendar"></ion-icon>
-              <div class="icon-info">
-                <h4>Ano</h4>
-                <p id="service-year3"></p>
+            <div class="just-icons">
+              <div class="icon-container">
+                <ion-icon class="icon" name="calendar"></ion-icon>
+                <div class="icon-info">
+                  <h4>Ano</h4>
+                  <p id="service-year3"></p>
+                </div>
+              </div>
+              <div id="service-period" class="icon-container">
+                <ion-icon class="icon" name="time"></ion-icon>
+                <div class="icon-info">
+                  <h4>Período</h4>
+                  <p id="service-period3">00/00/22 a 00/00/22</p>
+                </div>
+              </div>
+              <div class="icon-container">
+                <ion-icon class="icon" name="people"></ion-icon>
+                <div class="icon-info">
+                  <h4>Contratante</h4>
+                  <p id="service-hirer3"></p>
+                </div>
+              </div>
+              <div class="icon-container">
+                <ion-icon class="icon" name="briefcase"></ion-icon>
+                <div class="icon-info">
+                  <h4>Categoria</h4>
+                  <p id="service-category3"></p>
+                </div>
               </div>
             </div>
-            <div id="service-period" class="icon-container">
-              <ion-icon class="icon" name="time"></ion-icon>
-              <div class="icon-info">
-                <h4>Período</h4>
-                <p id="service-period3">00/00/22 a 00/00/22</p>
-              </div>
-            </div>
-            <div class="icon-container">
-              <ion-icon class="icon" name="people"></ion-icon>
-              <div class="icon-info">
-                <h4>Contratante</h4>
-                <p id="service-hirer3"></p>
-              </div>
-            </div>
-            <div class="icon-container">
-              <ion-icon class="icon" name="briefcase"></ion-icon>
-              <div class="icon-info">
-                <h4>Categoria</h4>
-                <p id="service-category3"></p>
-              </div>
-            </div>
-
             <button onclick="showAlert()" class="project-btn">
               SAIBA MAIS
             </button>
@@ -195,35 +201,36 @@
 
           <!--Icons-->
           <div class="icons-container">
-            <div class="icon-container">
-              <ion-icon class="icon" name="calendar"></ion-icon>
-              <div class="icon-info">
-                <h4>Ano</h4>
-                <p id="service-year4"></p>
+            <div class="just-icons">
+              <div class="icon-container">
+                <ion-icon class="icon" name="calendar"></ion-icon>
+                <div class="icon-info">
+                  <h4>Ano</h4>
+                  <p id="service-year4"></p>
+                </div>
+              </div>
+              <div id="service-period" class="icon-con tainer">
+                <ion-icon class="icon" name="time"></ion-icon>
+                <div class="icon-info">
+                  <h4>Período</h4>
+                  <p id="service-period4">00/00/22 a 00/00/22</p>
+                </div>
+              </div>
+              <div class="icon-container">
+                <ion-icon class="icon" name="people"></ion-icon>
+                <div class="icon-info">
+                  <h4>Contratante</h4>
+                  <p id="service-hirer4"></p>
+                </div>
+              </div>
+              <div class="icon-container">
+                <ion-icon class="icon" name="briefcase"></ion-icon>
+                <div class="icon-info">
+                  <h4>Categoria</h4>
+                  <p id="service-category4"></p>
+                </div>
               </div>
             </div>
-            <div id="service-period" class="icon-con tainer">
-              <ion-icon class="icon" name="time"></ion-icon>
-              <div class="icon-info">
-                <h4>Período</h4>
-                <p id="service-period4">00/00/22 a 00/00/22</p>
-              </div>
-            </div>
-            <div class="icon-container">
-              <ion-icon class="icon" name="people"></ion-icon>
-              <div class="icon-info">
-                <h4>Contratante</h4>
-                <p id="service-hirer4"></p>
-              </div>
-            </div>
-            <div class="icon-container">
-              <ion-icon class="icon" name="briefcase"></ion-icon>
-              <div class="icon-info">
-                <h4>Categoria</h4>
-                <p id="service-category4"></p>
-              </div>
-            </div>
-
             <button onclick="showAlert()" class="project-btn">
               SAIBA MAIS
             </button>
@@ -263,7 +270,7 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="../src/service-scripts.js"></script>
-  <script src="../src/scripts.js"></script>
+  <script src="../scripts.js"></script>
 </body>
 
 </html>
