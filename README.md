@@ -1,9 +1,6 @@
 <h1 align="center">WEBSITE FIBRASULRS</h1>
 <p align="center">A FIBRASULRS é uma empresa prestadora de serviços de manutenções industriais localizada no complexo da CMPC, em Guaiba/RS. </p>
 
-<p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
-</p>
 
 <img alt="foto do site fibrasul" src="./assets/foto-site.png" width="100%">
 <p align="center">O site está disponível em :point_right: <a href="https://fibrasulrs.com.br" target:"_blank">Site da Fibrasul</p>
