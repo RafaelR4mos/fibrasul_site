@@ -1,0 +1,87 @@
+.main #carousel-main {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+.main #carousel-main #info-btn {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 25px;
+  z-index: 2;
+}
+.main #carousel-main #info-btn button {
+  width: 200px;
+  border: none;
+  padding: 5px 10px;
+  border: 1.5px solid #d1d1d1;
+  background-color: transparent;
+}
+.main #carousel-main #info-btn button p {
+  text-align: center;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+}
+.main #carousel-main #info-btn button:hover {
+  cursor: pointer;
+  border: 1.5px solid white;
+  transition: 600ms;
+}
+.main #carousel-main #info-btn button:hover p {
+  opacity: 80%;
+  transition: 600ms;
+}
+.main #carousel-main #btnL {
+  left: 0px;
+  margin-left: 20px;
+}
+.main #carousel-main #btnR {
+  right: 0px;
+  margin-right: 20px;
+}
+.main #carousel-main .btn {
+  position: absolute;
+  top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: auto;
+  background: #fff;
+  border-radius: 60px;
+  z-index: 2;
+  cursor: pointer;
+}
+.main #carousel-main .btn #btn-img {
+  display: flex;
+  font-size: 50px;
+}
+.main #carousel-main .btn:hover {
+  color: #fff;
+  background-color: #1b547a;
+  transition: 500ms;
+}
+.main #carousel-main .animate {
+  transition-duration: var(--windowWidth);
+}
+.main #carousel-main #carousel-items {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.main #carousel-main #carousel-items .carousel-content {
+  flex: none;
+  width: 100%;
+  height: 400px;
+  scroll-snap-align: start;
+  z-index: 1;
+}
+.main #carousel-main #carousel-items .carousel-images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

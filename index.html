@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="FibrasulRS manutenções industriais" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibrasul Site</title>
+    <link rel="icon" href="assets/fibrasul-favicon.png" />
+  </head>
+  <body>
+    <header class="primary-header">
+      <div>
+        <img src="./assets/fibrasul-logo.png" alt="" />
+      </div>
+
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav>
+        <ul
+          id="primary-navigation"
+          class="primary-navigation flex"
+          data-visible="false"
+        >
+          <li>
+            <a href="#">Home</a>
+          </li>
+
+          <li>
+            <a href="#">Serviços</a>
+          </li>
+
+          <li>
+            <a href="#">Infraestrutura</a>
+          </li>
+
+          <li>
+            <a href="#">Equipe</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div id="carousel-main">
+        <div class="btn" id="btnL">
+          <ion-icon
+            id="btn-img"
+            name="chevron-back-outline"
+            aria-label="Icone de seta utilizado para retornar uma posição no carrosel"
+          ></ion-icon>
+        </div>
+
+        <div class="btn" id="btnR">
+          <ion-icon
+            id="btn-img"
+            name="chevron-forward-outline"
+            aria-label="Icone de seta utilizado para avançar uma posição no carrosel"
+          ></ion-icon>
+        </div>
+
+        <div id="info-btn">
+          <button onclick="selectHref()">
+            <p>Saiba mais</p>
+          </button>
+        </div>
+
+        <!--Adicionar conteúdo aos "alt" quando as imagens que serão utilizadas, de fato no site estiverem disponíveis-->
+        <div id="carousel-items">
+          <div class="carousel-content">
+            <img class="carousel-images" src="assets/equipe.jpg" alt="" />
+          </div>
+          <div class="carousel-content">
+            <img class="carousel-images" src="assets/gestao.jpg" alt="" />
+          </div>
+          <div class="carousel-content">
+            <img class="carousel-images" src="assets/fibra.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+    <script type="module" src="/main.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="nav.js" defer></script>
+  </body>
+</html>
