@@ -2,6 +2,8 @@
 
 @import "header.css";
 @import "carousel.css";
+@import "cards.css";
+@import "footer.css";
 
 :root {
   --stone-50: #fafaf9;
@@ -15,6 +17,7 @@
 
   --red-900: #7f1d1d;
 
+  --neutral-600: #565656;
   --neutral-700: #404040;
   --neutral-800: #262626;
   --neutral-900: #171717;
@@ -56,10 +59,6 @@ button {
   font-size: 1rem;
 }
 
-.main {
-  display: none;
-}
-
 .sr-only {
   display: none;
 }
@@ -67,4 +66,25 @@ button {
 .resize-animation-stopper * {
   animation: none !important;
   transition: none !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
