@@ -75,3 +75,7 @@
 .bullet-nav span {
   display: none;
 }
+
+.actual-carousel-bullet {
+  background: var(--red-900);
+}

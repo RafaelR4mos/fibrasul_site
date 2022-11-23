@@ -3,6 +3,8 @@ import './styles/index.css'
 const imagesAmount = document.querySelectorAll(".carousel-content").length;
 const rightCarouselArrow = document.getElementById('btnR');
 const leftCarouselArrow = document.getElementById('btnL');
+const carouselBulletNav = document.querySelector('.carousel-bullet-nav-container');
+const bulletPoints = document.querySelector('.bullet-nav');
 
 
 let images;
@@ -12,6 +14,20 @@ let resizeTimer;
 var arrayPosition = 0;
 
 
+carouselBulletNav.addEventListener('click', (e) => {
+  const clickedElement = e.target
+
+  if (clickedElement.id == 'bullet-1') {
+    move(-1);
+  }
+  else if (clickedElement.id == 'bullet-2') {
+    move(-2);
+  }
+  else if (clickedElement.id == 'bullet-3') {
+    move(-3);
+  }
+})
+
 
 // USED TO CONTROL ARRAY POSITION VALUES
 rightCarouselArrow.addEventListener('click', () => {
@@ -20,6 +36,8 @@ rightCarouselArrow.addEventListener('click', () => {
 
 leftCarouselArrow.addEventListener('click', () => {
   arrayPosition -= 1;
+  
+console.log(arrayPosition)
 })
 
 document.addEventListener("DOMContentLoaded", function () {

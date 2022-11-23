@@ -59,6 +59,19 @@ button {
   font-size: 1rem;
 }
 
+h1 {
+  font-size: 43.95px;
+}
+
+h2 {
+  font-size: 35.16px;
+}
+
+h3 {
+  font-size: 18.13;
+}
+
+
 .sr-only {
   display: none;
 }
