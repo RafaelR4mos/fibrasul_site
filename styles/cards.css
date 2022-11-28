@@ -52,6 +52,10 @@
   border-radius: 1.25rem;
 }
 
+.hidden-cards {
+  display: none;
+}
+
 
 .card-title {
   display: flex;

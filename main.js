@@ -5,23 +5,21 @@ const rightCarouselArrow = document.getElementById("btnR");
 const leftCarouselArrow = document.getElementById("btnL");
 const indicatorParents = document.querySelector(".carousel-bullet-nav-container");
 const carouselSwipeArea = document.querySelector("#carousel-main");
+const hiddenCards = document.querySelector('.hidden-cards')
+const knowMoreCardsBtn = document.querySelector('#cards-btn')
+
+const slider = document.querySelector('.slider')
+const rightPortfolioArrow = document.querySelector('.arrow-right')
+const portfolioBulletNavParents = document.querySelector('.controls ul')
 
 let images;
 let imagesPosition = 0;
 let touchStart, touchEnd;
 let resizeTimer;
 var arrayPosition = 0;
+var portfolioSectionIndex = 0;
 
 
-document.querySelectorAll("#carousel-section .opa").forEach(function(indicator, ind) {
-    indicator.addEventListener("click", function() {
-    arrayPosition = ind;
-    indicator.classList.add("selected");
-})
-});
-
-
-// USED TO CONTROL ARRAY POSITION VALUES
 leftCarouselArrow.addEventListener("click", function() {
   arrayPosition = (arrayPosition > 0) ? arrayPosition - 1 : 0;
   setIndex();
@@ -37,12 +35,23 @@ rightCarouselArrow.addEventListener("click", function() {
 });
 
 
+document.querySelectorAll('.controls li').forEach(function (indicator, ind) {
+  indicator.addEventListener('click', function () {
+    portfolioSectionIndex = ind
+    document.querySelector('.controls .selected').classList.remove('selected');
+    indicator.classList.add('selected');
+    slider.style.transform = 'translate(' + (portfolioSectionIndex) * -25 + '%)';
+    console.log(portfolioSectionIndex)
+  });
 
-function setIndex() {
-  document.querySelector('#carousel-section .selected').classList.remove("selected");
-}
+});
 
-
+rightPortfolioArrow.addEventListener('click', () => {
+  portfolioSectionIndex = (portfolioSectionIndex < 3) ? portfolioSectionIndex + 1 : 0;
+  document.querySelector('.controls .selected').classList.remove('selected');
+  portfolioBulletNavParents.children[portfolioSectionIndex].classList.add('selected')
+  slider.style.transform = 'translate(' + (portfolioSectionIndex) * -25 + '%)';
+})
 
 document.addEventListener("DOMContentLoaded", function () {
   document.documentElement.style.setProperty(
@@ -96,6 +105,10 @@ window.addEventListener("resize", () => {
   }, 400);
 });
 
+
+function setIndex() {
+  document.querySelector('#carousel-section .selected').classList.remove("selected");
+}
 
 function move(direction) {
   const imageW = images.offsetWidth;
