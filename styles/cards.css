@@ -1,8 +1,109 @@
 #cards-section {
-  margin-top: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.card-subtitle strong {
+  color: var(--red-900);
+}
+
+.cards-container-title {
+  margin-top: 2.8125rem; 
+  align-self: flex-start;
+}
+
+.title-underline {
+  margin: 0 0 0 0.0625rem;
+  align-self: flex-start;
+  height: 0.1563rem;
+  width: 5rem;
+  background: var(--red-900);
+}
  
+.cards-container {
+  margin: 4rem 0;
+  display: flex;
+  gap: 2.25rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.card:nth-child(even) {
+  background: var(--neutral-900);
+}
+
+.card:nth-child(odd) {
+  background: var(--neutral-700);
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9375rem 1.125rem;
+  height: 21.125rem;
+  width: 17.5rem;
+  gap: 2.5rem;
+
+  border-radius: 1.25rem;
+}
+
+
+.card-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h3 {
+  color: var(--zinc-200);
+  font-weight: 600;
+}
+
+.card span {
+  color: var(--zinc-400);
+}
+
+.card p {
+  color: var(--neutral-200);
+  text-align: justify;
+  font-weight: 400;
+}
+
+#cards-section button {
+  background: #fff;
+  border-radius: 3.125rem;
+  padding: 0.625rem 1rem;
+  font-size: 1.375rem;
+  font-weight: 600;
+  border-radius: 3.125rem;
+  border: 0.125rem solid var(--red-900);
+
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#cards-section button:hover {
+  background: var(--red-900);
+  color: #fff;
+}
+
+@media(max-width: 81.25rem) {
+
+  .cards-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+
+}
+
+@media(max-width: 445px) {
+  .card {
+    flex-grow: 0.5;
+  }
+}

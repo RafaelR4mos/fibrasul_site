@@ -1,7 +1,7 @@
 header {
   position: sticky;
   width: 100%;
-  padding: 20px 32px;
+  padding: 1.25rem 2rem;
   background: var(--stone-50);
   z-index: 999;
 }
@@ -17,11 +17,10 @@ header {
 }
 
 .primary-header img {
-  width: 180px;
+  width: 11.25rem;
 }
 
 .primary-navigation {
-  padding-inline: 0;
   z-index: 999;
 }
 
@@ -41,7 +40,8 @@ header {
   gap: 3rem;
 }
 
-@media (max-width: 700px) {
+
+@media (max-width: 43.75rem) {
   .primary-navigation {
     gap: 4rem;
 
@@ -57,6 +57,13 @@ header {
 
     transform: translateX(100%);
     transition: transform 350ms ease-out;
+  }
+
+  .primary-navigation a {
+    font-size: 1.6rem;
+
+    color: var(--neutral-900);
+    font-weight: 700;
   }
 
   .primary-navigation[data-visible="true"] {

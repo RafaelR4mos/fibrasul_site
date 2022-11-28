@@ -6,30 +6,31 @@
 }
 
 .main #carousel-main #btnL {
-  left: 0px;
-  margin-left: 20px;
+  left: 0rem;
+  margin-left: 1.25rem;
 }
 .main #carousel-main #btnR {
-  right: 0px;
-  margin-right: 20px;
+  right: 0rem;
+  margin-right: 1.25rem;
 }
 .main #carousel-main .btn {
   position: absolute;
-  top: 150px;
+  top: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
+  width: 3.125rem;
   height: auto;
-  border: solid 1px black;
-  border-radius: 60px;
+  border: solid 0.0625rem black;
+  border-radius: 3.75rem;
   z-index: 222;
   cursor: pointer;
   transition: all 0.2s;
+  transform: translateY(-50%)
 }
 .main #carousel-main .btn #btn-img {
   display: flex;
-  font-size: 50px;
+  font-size: 3.125rem;
 }
 .main #carousel-main .btn:hover {
   border: none;
@@ -46,7 +47,7 @@
 .main #carousel-main #carousel-items .carousel-content {
   flex: none;
   width: 100%;
-  height: 400px;
+  height: 25rem;
   scroll-snap-align: start;
   z-index: 1;
 }
@@ -58,24 +59,35 @@
 
 .carousel-bullet-nav-container {
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
-.bullet-nav {
-  width: 25px;
-  height: 25px;
-  border-radius: 100px;
-  border: solid 1px var(--red-900);
+.carousel-bullet-nav-container li {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 6.25rem;
+  border: solid 0.0625rem var(--red-900);
+  background: var(--red-900);
 }
 
 .bullet-nav span {
   display: none;
 }
 
-.actual-carousel-bullet {
-  background: var(--red-900);
+.carousel-bullet-nav-container li.selected {
+  background: transparent;
+}
+
+@media(max-width: 768px) {
+  .main #carousel-main #carousel-items .carousel-content {
+    height: 15rem;
+  }
+
+  .main #carousel-main .btn {
+    display: none;
+  }
 }
