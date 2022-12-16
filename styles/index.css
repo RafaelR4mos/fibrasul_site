@@ -5,6 +5,7 @@
 @import "cards.css";
 @import "portfolio.css";
 @import "footer.css";
+@import "partners.css";
 
 :root {
   --cyan-900: #164E63;
@@ -52,6 +53,7 @@ body {
 a {
   text-decoration: none;
   color: var(--neutral-900);
+  font-size: 18px;
 }
 
 li {
@@ -94,8 +96,8 @@ p, span {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
-  border-radius: 4px;
+  width: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 /* Track */
@@ -113,31 +115,46 @@ p, span {
   background: #555;
 }
 
-#cards-section, #portfolio-section {
-  padding: 7.5rem 5rem;
+#cards-section {
+  margin: 8rem 5rem 11rem;
+}
+
+#portfolio-section {
+  margin-bottom: 10.875rem;
+}
+
+#partners-section {
+  margin: 0 5rem 10.875rem;
 }
 
 
-@media(max-width: 1300px) {
-  #cards-section, #portfolio-section {
-    padding: 6.25rem 2.5rem;
+@media(max-width: 81.25rem) {
+  #cards-section {
+    margin: 6.25rem 2.5rem;
+  }
+  #cards-section h1, .card-subtitle, #partners-section > h2 {
+    text-align: center;
   }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 48rem) {
   html {
     font-size: 70%;
   }
-  #cards-section, #portfolio-section {
-    padding: 3.125rem 1.25rem;
+  #cards-section {
+    margin: 3.125rem 1.25rem;
   }
 
-  #cards-section h1, .card-subtitle {
-    text-align: center;
-  } 
-}
+  #partners-section {
+    margin: 0 2.5rem;
+  }
 
-@media(max-width: 445px) {
+
+}
+  
+
+
+@media(max-width: 27.8125rem) {
   html {
     font-size: 50%;
   }

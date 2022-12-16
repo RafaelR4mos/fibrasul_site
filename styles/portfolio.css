@@ -14,13 +14,13 @@
 }
 
 .container {
-    margin-top: 3rem;
+    margin-top: 1rem;
     width: 100vw;
 }
 
 .carousel {
     background: var(--neutral-800);
-    height: 48rem;
+    height: 45rem;
     position: relative;
     overflow: hidden;
 }
