@@ -14,17 +14,17 @@
 }
 
 .partners-galery-container {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5625rem;
-    margin-top: 3.75rem;
+    margin-top: 1.75rem;
 }
 
 .partners {
-    width: 15.625rem;
+    width: 180px;
     aspect-ratio: 1.5;
     background: var(--neutral-800);
 }

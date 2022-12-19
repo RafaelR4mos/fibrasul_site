@@ -20,7 +20,7 @@
 
 .carousel {
     background: var(--neutral-800);
-    height: 45rem;
+    height: 40rem;
     position: relative;
     overflow: hidden;
 }

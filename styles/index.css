@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&family=Roboto:wght@400;500;700;800;900&display=swap");
 
 @import "header.css";
 @import "carousel.css";
 @import "cards.css";
 @import "portfolio.css";
-@import "footer.css";
 @import "partners.css";
+@import "data.css";
+@import "footer.css";
 
 :root {
   --cyan-900: #164E63;
@@ -116,21 +117,25 @@ p, span {
 }
 
 #cards-section {
-  margin: 8rem 5rem 11rem;
+  padding: 11rem 5rem 0;
 }
-
+ 
 #portfolio-section {
-  margin-bottom: 10.875rem;
+  padding: 11rem 0 0;
 }
 
 #partners-section {
-  margin: 0 5rem 10.875rem;
+  padding: 11rem 5rem 0;
+}
+
+#data-section {
+  padding: 11rem 0 11rem;
 }
 
 
 @media(max-width: 81.25rem) {
   #cards-section {
-    margin: 6.25rem 2.5rem;
+    padding: 6.25rem 2.5rem;
   }
   #cards-section h1, .card-subtitle, #partners-section > h2 {
     text-align: center;
@@ -142,17 +147,16 @@ p, span {
     font-size: 70%;
   }
   #cards-section {
-    margin: 3.125rem 1.25rem;
+    padding: 3.125rem 1.25rem;
   }
 
   #partners-section {
-    margin: 0 2.5rem;
+    padding: 0 2.5rem;
   }
 
 
 }
   
-
 
 @media(max-width: 27.8125rem) {
   html {
