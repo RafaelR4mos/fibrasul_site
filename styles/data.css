@@ -1,6 +1,7 @@
 .data-container {
     padding: 40px 80px 100px;
     background: var(--neutral-800);
+    height: 600px;
 }
 
 .data-header {
@@ -23,8 +24,11 @@
 }
 
 .data-flex {
+    margin-top: 130px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    gap: 50px;
 }
 
 .data {
@@ -35,7 +39,7 @@
 
 
 .data-content {
-    gap: 12px;
+    gap: 15px;
     width: 100%;
     display: flex;
 }

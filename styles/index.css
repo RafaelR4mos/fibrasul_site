@@ -6,6 +6,7 @@
 @import "portfolio.css";
 @import "partners.css";
 @import "data.css";
+@import "team.css";
 @import "footer.css";
 
 :root {
@@ -129,9 +130,12 @@ p, span {
 }
 
 #data-section {
-  padding: 11rem 0 11rem;
+  padding: 11rem 0 0;
 }
 
+#team-section {
+  padding: 11rem 5rem 11rem;
+}
 
 @media(max-width: 81.25rem) {
   #cards-section {

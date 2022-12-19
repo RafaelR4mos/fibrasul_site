@@ -1,0 +1,65 @@
+.team-header > div {
+    margin-top: 5px;
+    width: 50px;
+    height: 2px;
+    background: var(--red-900);
+}
+
+.team-header p {
+    margin-top: 32px;
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+}
+
+.team-header strong {
+    color: var(--cyan-900);
+}
+
+.banners-container {
+    margin: 40px auto 0;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.banner {
+    display: flex;
+    padding: 12px 12px 12px 60px; 
+    background: linear-gradient(95.17deg, #0c0822 0.41%, #423D62 30.86%);
+    border-radius: 20px;
+}
+
+.banner:nth-child(even) {
+    flex-direction: row-reverse;
+    padding: 12px 60px 12px 12px;
+}
+
+.banner:nth-child(even) h3{
+    text-align: right;
+}
+
+.banner:nth-child(even) p {
+    float: right;
+}
+
+.banner img {
+    aspect-ratio: 16 / 9;
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+ .banner p {
+    width: 80%;
+    margin-top: 28px;
+    color: var(--stone-100);
+    text-align: justify;
+}
+
+.banner h3 {
+    margin-top: 24px;
+    color: var(--stone-50);
+}
