@@ -10,7 +10,7 @@
 @import "footer.css";
 
 :root {
-  --cyan-900: #164E63;
+  --cyan-900: #164e63;
 
   --stone-50: #fafaf9;
   --stone-100: #f5f5f4;
@@ -83,7 +83,8 @@ h3 {
   font-size: 1.75rem;
 }
 
-p, span {
+p,
+span {
   font-size: 1.125rem;
 }
 
@@ -120,7 +121,7 @@ p, span {
 #cards-section {
   padding: 11rem 5rem 0;
 }
- 
+
 #portfolio-section {
   padding: 11rem 0 0;
 }
@@ -137,16 +138,18 @@ p, span {
   padding: 11rem 5rem 11rem;
 }
 
-@media(max-width: 81.25rem) {
+@media (max-width: 81.25rem) {
   #cards-section {
     padding: 6.25rem 2.5rem;
   }
-  #cards-section h1, .card-subtitle, #partners-section > h2 {
+  #cards-section h1,
+  .card-subtitle,
+  #partners-section > h2 {
     text-align: center;
   }
 }
 
-@media(max-width: 48rem) {
+@media (max-width: 48rem) {
   html {
     font-size: 70%;
   }
@@ -157,12 +160,9 @@ p, span {
   #partners-section {
     padding: 0 2.5rem;
   }
-
-
 }
-  
 
-@media(max-width: 27.8125rem) {
+@media (max-width: 27.8125rem) {
   html {
     font-size: 50%;
   }
