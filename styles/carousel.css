@@ -1,9 +1,4 @@
-#carousel-section {
-  margin-top: 120px;
-}
-
-
-.main #carousel-main {
+  .main #carousel-main {
   display: flex;
   position: relative;
   width: 100vw;

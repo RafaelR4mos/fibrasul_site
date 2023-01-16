@@ -1,44 +1,54 @@
 .team-header > div {
-    margin-top: 5px;
-    width: 50px;
-    height: 2px;
+    margin-top: 0.3125rem;
+    width: 3.125rem;
+    height: 0.125rem;
     background: var(--red-900);
 }
 
-.team-header p {
-    margin-top: 32px;
+.team-header p, .team-header span, .team-header span strong {
+    margin: 1rem auto;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 1.625rem;
     text-align: center;
 }
 
-.team-header strong {
+.team-header span {
+    display: block;
+}
+
+.team-header span strong {
     color: var(--cyan-900);
+
 }
 
 .banners-container {
-    margin: 40px auto 0;
+    margin: 1.5rem auto 0;
     width: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 24px;
+    gap: 1.5rem;
+}
+
+.banners-container h4 {
+    font-size: 1.75rem;
 }
 
 .banner {
     display: flex;
-    padding: 12px 12px 12px 60px; 
-    background: linear-gradient(95.17deg, #0c0822 0.41%, #423D62 30.86%);
-    border-radius: 20px;
+    padding: 0.75rem 0.75rem 0.75rem 3.75rem;
+    background: linear-gradient(95deg, #110a35 1%, #3a3461 75%);
+    border-radius: 1.125rem;
 }
 
 .banner:nth-child(even) {
     flex-direction: row-reverse;
-    padding: 12px 60px 12px 12px;
+    padding: 0.75rem 3.75rem 0.75rem 0.75rem;
+    background: linear-gradient(-95deg, #110a35 1%, #3a3461 75%);
 }
 
-.banner:nth-child(even) h3{
+.banner:nth-child(even) h4{
     text-align: right;
 }
 
@@ -48,18 +58,51 @@
 
 .banner img {
     aspect-ratio: 17 / 10;
-    max-width: 350px;
-    border-radius: 20px;
+    max-width: 21.875rem;
+    border-radius: 1.125rem;
 }
 
  .banner p {
     width: 80%;
-    margin-top: 28px;
+    margin-top: 1.75rem;
     color: var(--stone-100);
     text-align: justify;
 }
 
-.banner h3 {
-    margin-top: 24px;
+.banner h4 {
+    margin-top: 1.5rem;
     color: var(--stone-50);
+}
+
+@media(max-width: 890px) {
+    .banners-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .banners-container .banner {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 8px 12px 8px;
+        height: 100%;
+    }
+
+    .banner p {
+        width: unset;
+        margin-top: 0;
+    }
+
+    .banners-container .banner h4 {
+        text-align: left;
+        margin-bottom: 8px;
+        font-size: 1.4rem;
+    }
+
+    .banner img {
+        width: 100%;
+    }
 }

@@ -1,7 +1,8 @@
 .data-container {
-    padding: 40px 80px 100px;
+    position: relative;
+    padding: 2.5rem 5rem 2.5rem;
     background: var(--neutral-800);
-    height: 600px;
+    height: 37.5rem;
 }
 
 .data-header {
@@ -19,16 +20,20 @@
 }
 
 .data-header img {
-    width: 230px;
+    width: 14.375rem;
     mix-blend-mode: overlay;
 }
 
 .data-flex {
-    margin-top: 130px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 50px;
+    gap: 5rem;
 }
 
 .data {
@@ -39,24 +44,25 @@
 
 
 .data-content {
-    gap: 15px;
+    gap: 0.9375rem;
     width: 100%;
     display: flex;
 }
 
 span > strong, .data-content > span {
     font-weight: 800;
-    font-size: 60px;
+    font-size: 3.75rem;
 }
 
 span > strong {
-    margin-right: 5px;
+    margin-right: 0.3125rem;
     color: var(--red-900);
 }
 
 .data-content > img {
     position: relative;
-    right: 0s;
+    right: 0px;
+    width: 2rem;
 }
 
 .data-content > span {
@@ -65,11 +71,22 @@ span > strong {
 
 .data-line {
 
-    height: 3px;
+    height: 0.1875rem;
     width: 100%;
     background:  linear-gradient(90deg, rgba(127,29,29,1) 0%, rgba(0,0,0,1) 80%);
 }
 
 .data > p {
     color: #ffff;
+}
+
+@media(max-width: 1000px) {
+    .data-flex {
+        margin-top: 32px;
+        position: none;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        justify-items: center;
+        align-items: center;
+    }
 }

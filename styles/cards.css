@@ -5,12 +5,16 @@
   align-items: center;
 }
 
+.card-subtitle {
+  white-space: nowrap;
+}
+
 .card-subtitle strong {
   color: var(--red-900);
 }
 
 .cards-container-title {
-  margin-top: 2.8125rem; 
+  margin-top: 2.8125rem;
   align-self: flex-start;
 }
 
@@ -21,7 +25,7 @@
   width: 5rem;
   background: var(--red-900);
 }
- 
+
 .cards-container {
   margin: 4rem 0;
   display: flex;
@@ -97,17 +101,25 @@
 }
 
 @media(max-width: 81.25rem) {
-
   .cards-container {
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(130px, 250px));
+    justify-items: center;
+
+    gap: 3rem;
   }
 
-
+  .card {
+    width: 100%;
+  }
 }
 
-@media(max-width: 445px) {
-  .card {
-    flex-grow: 0.5;
+@media(max-width: 32rem) {
+  .cards-container {
+    gap: 1rem;
+  }
+  .card-subtitle {
+    font-size: 1.5rem;
   }
 }

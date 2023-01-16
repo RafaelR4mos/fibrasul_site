@@ -48,7 +48,7 @@ body {
 }
 
 body {
-  font-size: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   overflow-x: hidden;
 }
 
@@ -62,7 +62,7 @@ li {
   list-style: none;
 }
 
-body,
+
 input,
 textarea,
 button {
@@ -72,7 +72,9 @@ button {
 }
 
 h1 {
-  font-size: 2.74rem;
+  font-size: 2.9rem;
+  white-space: nowrap;
+  font-weight: 700;
 }
 
 h2 {
@@ -81,6 +83,10 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.45rem;
 }
 
 p,
@@ -119,28 +125,28 @@ span {
 }
 
 #cards-section {
-  padding: 11rem 5rem 0;
+  margin: 11rem 5rem 0;
 }
 
 #portfolio-section {
-  padding: 11rem 0 0;
+  margin: 11rem 0 0;
 }
 
 #partners-section {
-  padding: 11rem 5rem 0;
+  margin: 11rem 5rem 0;
 }
 
 #data-section {
-  padding: 11rem 0 0;
+  margin: 11rem 0 0;
 }
 
 #team-section {
-  padding: 11rem 5rem 11rem;
+  margin: 11rem 5rem 11rem;
 }
 
 @media (max-width: 81.25rem) {
-  #cards-section {
-    padding: 6.25rem 2.5rem;
+  html {
+    font-size: 80%;
   }
   #cards-section h1,
   .card-subtitle,
@@ -153,16 +159,20 @@ span {
   html {
     font-size: 70%;
   }
-  #cards-section {
-    padding: 3.125rem 1.25rem;
-  }
+}
 
-  #partners-section {
-    padding: 0 2.5rem;
+
+@media(max-width: 768px) {
+  #cards-section {
+    margin-top: 5rem;
   }
 }
 
-@media (max-width: 27.8125rem) {
+
+@media (max-width: 32rem) {
+  h1 {
+    font-size: 2.6rem;
+  }
   html {
     font-size: 50%;
   }

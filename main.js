@@ -31,7 +31,10 @@ var portfolioSectionIndex = 0;
 //   partnersHiddenItems.classList.remove('disabled-small-screen');
 // })
 
+
+//First Page carousel
 leftCarouselArrow.addEventListener("click", function () {
+  move(1);
   arrayPosition = arrayPosition > 0 ? arrayPosition - 1 : 0;
   setIndex();
   indicatorParents.children[arrayPosition].classList.add("selected");
@@ -39,12 +42,34 @@ leftCarouselArrow.addEventListener("click", function () {
 });
 
 rightCarouselArrow.addEventListener("click", function () {
+  move(-1);
   arrayPosition = arrayPosition < 2 ? arrayPosition + 1 : 2;
   setIndex();
   indicatorParents.children[arrayPosition].classList.add("selected");
   console.log(arrayPosition);
 });
 
+carouselSwipeArea.addEventListener("touchstart", (event) => {
+  touchStart = Math.floor(event.changedTouches[0].screenX);
+});
+carouselSwipeArea.addEventListener("touchend", (event) => {
+  touchEnd = Math.floor(event.changedTouches[0].screenX);
+  if (touchStart > touchEnd) {
+    move(-1);
+    arrayPosition = arrayPosition < 2 ? arrayPosition + 1 : 2;
+    setIndex();
+    indicatorParents.children[arrayPosition].classList.add("selected");
+    console.log(arrayPosition);
+  } else {
+    move(1);
+    arrayPosition = arrayPosition > 0 ? arrayPosition - 1 : 0;
+    setIndex();
+    indicatorParents.children[arrayPosition].classList.add("selected");
+  }
+});
+
+
+//Second Page carousel in the Portfolio Section
 document.querySelectorAll(".controls li").forEach(function (indicator, ind) {
   indicator.addEventListener("click", function () {
     portfolioSectionIndex = ind;
@@ -64,49 +89,27 @@ rightPortfolioArrow.addEventListener("click", () => {
   slider.style.transform = "translate(" + portfolioSectionIndex * -25 + "%)";
 });
 
+slider.addEventListener('touchend', (event) => {
+  touchEnd = Math.floor(event.changedTouches[0].screenX);
+  if (touchStart > touchEnd) {
+    portfolioSectionIndex = portfolioSectionIndex < 3 ? portfolioSectionIndex + 1 : 0;
+    document.querySelector(".controls .selected").classList.remove("selected");
+    portfolioBulletNavParents.children[portfolioSectionIndex].classList.add(
+      "selected"
+    );
+    slider.style.transform = "translate(" + portfolioSectionIndex * -25 + "%)";
+  }
+})
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
-
-  //Prevent animation on the page-initialization
-  document.body.classList.add("resize-animation-stopper");
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    document.body.classList.remove("resize-animation-stopper");
-  }, 400);
-
-
   document.documentElement.style.setProperty(
     "--windowWidth",
     `${window.innerWidth / 2000 + "s"}`
   );
 
   images = document.querySelector("#carousel-items");
-
-  document.querySelector("#btnL").addEventListener("click", () => {
-    move(1);
-  });
-  document.querySelector("#btnR").addEventListener("click", () => {
-    move(-1);
-  });
-
-  carouselSwipeArea.addEventListener("touchstart", (event) => {
-    touchStart = Math.floor(event.changedTouches[0].screenX);
-  });
-  carouselSwipeArea.addEventListener("touchend", (event) => {
-    touchEnd = Math.floor(event.changedTouches[0].screenX);
-    if (touchStart > touchEnd) {
-      move(-1);
-      arrayPosition = arrayPosition < 2 ? arrayPosition + 1 : 2;
-      setIndex();
-      indicatorParents.children[arrayPosition].classList.add("selected");
-      console.log(arrayPosition);
-    } else {
-      move(1);
-      arrayPosition = arrayPosition > 0 ? arrayPosition - 1 : 0;
-      setIndex();
-      indicatorParents.children[arrayPosition].classList.add("selected");
-    }
-  });
 });
 
 window.addEventListener("resize", function () {
