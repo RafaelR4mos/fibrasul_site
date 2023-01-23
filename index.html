@@ -56,53 +56,44 @@
 
     <main class="main">
       <section id="carousel-section">
-        <div id="carousel-main">
-          <div class="btn" id="btnL">
-            <ion-icon
-              id="btn-img"
-              name="chevron-back-outline"
-              aria-label="Icone de seta utilizado para retornar uma posição no carrosel"
-            ></ion-icon>
-          </div>
+        <div class="main-carousel-container">
+          <div class="main-carousel">
+            <div class="main-carousel-slider">
+              <section class="section">
+                <div><img src="./assets/images/team.webp" alt="" /></div>
+              </section>
 
-          <div class="btn" id="btnR">
-            <ion-icon
-              id="btn-img"
-              name="chevron-forward-outline"
-              aria-label="Icone de seta utilizado para avançar uma posição no carrosel"
-            ></ion-icon>
-          </div>
+              <section class="section">
+                <div><img src="./assets/images/caldeiraria.webp" alt="" /></div>
+              </section>
 
-          <!--Adicionar conteúdo aos "alt" quando as imagens que serão utilizadas, de fato no site estiverem disponíveis-->
-          <div id="carousel-items">
-            <div class="carousel-content">
-              <img
-                class="carousel-images"
-                src="assets/equipe.webp"
-                alt="Imagem com os colaboradores da fibrasul todos reunidos, de máscaras, em frente ao espaço da empresa."
-              />
+              <section class="section">
+                <div><img src="./assets/images/fibra.webp" alt="" /></div>
+              </section>
+
+              <section class="section">
+                <div><img src="./assets/images/gestao.webp" alt="" /></div>
+              </section>
             </div>
-            <div class="carousel-content">
-              <img
-                class="carousel-images"
-                src="assets/gestao.webp"
-                alt="Imagem de uma mulher loira de costas mexendo em um notebook aparentemente realizando o seu trabalho."
-              />
-            </div>
-            <div class="carousel-content">
-              <img
-                class="carousel-images"
-                src="assets/fibra.webp"
-                alt="Imagem de um colaborador realizando o polimento de uma tubulação de fibra com máscara, capacete e um jaleco./"
-              />
+            <div class="main-carousel-controls">
+              <button class="carousel-btn">
+                <ion-icon
+                  class="arrow-right"
+                  name="chevron-forward-outline"
+                  aria-label="Icone de seta utilizado para avançar uma posição no carrosel"
+                >
+                </ion-icon>
+              </button>
+
+              <ul class="main-carousel-bullet-nav">
+                <li class="selected"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
             </div>
           </div>
         </div>
-        <ul class="carousel-bullet-nav-container">
-          <li class="selected"></li>
-          <li class=""></li>
-          <li class=""></li>
-        </ul>
       </section>
 
       <section id="cards-section">
@@ -340,23 +331,23 @@
                       recusandae. Eius, laborum tenetur.
                     </p>
                     <div class="scope-objectives">
-                    <h3>Objetivos do Escopo</h3>
-                    <ul>
-                      <li>
-                        Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s.
-                      </li>
-                      <li>
-                        Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s, Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s.
-                      </li>
-                      <li>
-                        Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s.
-                      </li>
-                    </ul>
-                  </div>
+                      <h3>Objetivos do Escopo</h3>
+                      <ul>
+                        <li>
+                          Lorem Ipsum has been the industry's standard dummy
+                          text ever since the 1500s.
+                        </li>
+                        <li>
+                          Lorem Ipsum has been the industry's standard dummy
+                          text ever since the 1500s, Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s.
+                        </li>
+                        <li>
+                          Lorem Ipsum has been the industry's standard dummy
+                          text ever since the 1500s.
+                        </li>
+                      </ul>
+                    </div>
                     <div class="services-partners">
                       <div class="hirer">
                         <span>Contratante</span>
@@ -405,23 +396,23 @@
                     </p>
 
                     <div class="scope-objectives">
-                    <h3>Objetivos do Escopo</h3>
-                    <ul>
-                      <li>
-                        Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s.
-                      </li>
-                      <li>
-                        Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s, Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s.
-                      </li>
-                      <li>
-                        Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s.
-                      </li>
-                    </ul>
-                  </div>
+                      <h3>Objetivos do Escopo</h3>
+                      <ul>
+                        <li>
+                          Lorem Ipsum has been the industry's standard dummy
+                          text ever since the 1500s.
+                        </li>
+                        <li>
+                          Lorem Ipsum has been the industry's standard dummy
+                          text ever since the 1500s, Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s.
+                        </li>
+                        <li>
+                          Lorem Ipsum has been the industry's standard dummy
+                          text ever since the 1500s.
+                        </li>
+                      </ul>
+                    </div>
                     <div class="services-partners">
                       <div class="hirer">
                         <span>Contratante</span>
@@ -447,7 +438,7 @@
                 </ion-icon>
               </button>
 
-              <ul>
+              <ul class="portfolio-bullet-nav">
                 <li class="selected"></li>
                 <li></li>
                 <li></li>

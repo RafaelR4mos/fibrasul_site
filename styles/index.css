@@ -62,7 +62,6 @@ li {
   list-style: none;
 }
 
-
 input,
 textarea,
 button {
@@ -125,23 +124,15 @@ span {
 }
 
 #cards-section {
-  margin: 11rem 5rem 0;
-}
-
-#portfolio-section {
-  margin: 11rem 0 0;
+  padding: 0rem 5rem 0;
 }
 
 #partners-section {
-  margin: 11rem 5rem 0;
-}
-
-#data-section {
-  margin: 11rem 0 0;
+  padding: 0 5rem 0;
 }
 
 #team-section {
-  margin: 11rem 5rem 11rem;
+  padding: 0 5rem 11rem;
 }
 
 @media (max-width: 81.25rem) {
@@ -161,13 +152,11 @@ span {
   }
 }
 
-
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   #cards-section {
     margin-top: 5rem;
   }
 }
-
 
 @media (max-width: 32rem) {
   h1 {

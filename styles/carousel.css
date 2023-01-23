@@ -1,93 +1,86 @@
-  .main #carousel-main {
-  display: flex;
-  position: relative;
+.main-carousel-container {
+  margin-top: 1rem;
   width: 100vw;
+}
+
+.main-carousel {
+  height: 500px;
+  position: relative;
   overflow: hidden;
 }
 
-.main #carousel-main #btnL {
-  left: 0rem;
-  margin-left: 1.25rem;
-}
-.main #carousel-main #btnR {
-  right: 0rem;
-  margin-right: 1.25rem;
-}
-.main #carousel-main .btn {
-  position: absolute;
-  top: 50%;
+.main-carousel-slider {
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 3.125rem;
-  height: auto;
-  border: solid 0.0625rem black;
-  border-radius: 3.75rem;
-  z-index: 222;
-  cursor: pointer;
-  transition: all 0.2s;
-  transform: translateY(-50%)
+  width: 400%;
+  transition: all ease-in-out;
+  transition-duration: 0.7s;
 }
-.main #carousel-main .btn #btn-img {
+
+.main-carousel-slider section {
+  width: 100vw;
   display: flex;
-  font-size: 3.125rem;
 }
-.main #carousel-main .btn:hover {
-  border: none;
-  background: #fff;
-}
-.main #carousel-main .animate {
-  transition-duration: var(--windowWidth);
-}
-.main #carousel-main #carousel-items {
-  display: flex;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-.main #carousel-main #carousel-items .carousel-content {
-  flex: none;
+
+.main-carousel-slider section div {
   width: 100%;
-  height: 25rem;
-  scroll-snap-align: start;
-  z-index: 1;
 }
-.main #carousel-main #carousel-items .carousel-images {
+
+.main-carousel-slider section div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.carousel-bullet-nav-container {
-  margin: 0 auto;
-  margin-top: 1.25rem;
+.carousel-btn {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1.25rem;
-}
-
-.carousel-bullet-nav-container li {
-  width: 1.5625rem;
-  height: 1.5625rem;
-  border-radius: 6.25rem;
-  border: solid 0.0625rem var(--red-900);
-  background: var(--red-900);
-}
-
-.bullet-nav span {
-  display: none;
-}
-
-.carousel-bullet-nav-container li.selected {
+  justify-content: center;
+  padding: 0.3125rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.9375rem;
+  cursor: pointer;
   background: transparent;
+  border: 0.125rem solid var(--cyan-900);
+  border-radius: 3.125rem;
+  transition: all 0.4s;
+  font-size: 2.5rem;
+  box-shadow: 0px 0px 1px;
 }
 
-@media(max-width: 768px) {
-  .main #carousel-main #carousel-items .carousel-content {
-    height: 15rem;
-  }
+.carousel-btn:hover {
+  background: var(--cyan-900);
+  color: #fff;
+}
 
-  .main #carousel-main .btn {
-    display: none;
-  }
+.main-carousel-controls ul {
+  position: absolute;
+  bottom: 0.65rem;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+  z-index: 9;
+}
+
+.main-carousel-controls ul li {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 0.125rem solid var(--red-900);
+  border-radius: 3.125rem;
+  cursor: pointer;
+  margin: 0 0.625rem;
+  background: var(--red-900);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.main-carousel-controls ul li:hover {
+  transform: scale(1.1);
+}
+
+.main-carousel-controls ul li.selected {
+  background: transparent;
 }

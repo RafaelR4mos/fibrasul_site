@@ -1,124 +1,91 @@
 import "./styles/index.css";
 
 //Main carousel elements
-const imagesAmount = document.querySelectorAll(".carousel-content").length;
-const rightCarouselArrow = document.getElementById("btnR");
-const leftCarouselArrow = document.getElementById("btnL");
-const carouselSwipeArea = document.querySelector("#carousel-main");
+const mainCarouselBtn = document.querySelector(".carousel-btn");
 
-//Cards section elements
-const hiddenCards = document.querySelector(".hidden-cards");
-const knowMoreCardsBtn = document.querySelector("#cards-btn");
+//Page sections
+const cardsSection = document.querySelector("#cards-section");
+const portfolioSection = document.querySelector("#portfolio-section");
+const partnersSection = document.querySelector("#partners-section");
+const dataSection = document.querySelector("#data-section");
+const teamsSection = document.querySelector("#team-section");
 
-//Portfolio carousel elements
-const indicatorParents = document.querySelector(".carousel-bullet-nav-container");
-const slider = document.querySelector(".slider");
-const rightPortfolioArrow = document.querySelector(".arrow-right");
+const portfolioBtn = document.querySelector(".portfolio-btn");
 const portfolioBulletNavParents = document.querySelector(".controls ul");
+const mainCarouselBulletNavParents = document.querySelector(
+  ".main-carousel-controls ul"
+);
 
-// const partnersBtn = document.querySelector(".partners-galery-container + button");
-// const partnersHiddenItems = document.querySelectorAll(".partners-galery-container .disabled-small-screen");
+const header = document.querySelector(".primary-header");
+const headerHeight = header.offsetHeight + 8;
 
-let images;
-let imagesPosition = 0;
-let touchStart = 0;
-let touchEnd = 0;
 let resizeTimer;
-var arrayPosition = 0;
 var portfolioSectionIndex = 0;
+var mainCarouselSectionIndex = 0;
 
-// partnersBtn.addEventListener('click', () => {
-//   partnersHiddenItems.classList.remove('disabled-small-screen');
-// })
-
-
-//First Page carousel
-leftCarouselArrow.addEventListener("click", function () {
-  move(1);
-  arrayPosition = arrayPosition > 0 ? arrayPosition - 1 : 0;
-  setIndex();
-  indicatorParents.children[arrayPosition].classList.add("selected");
-  console.log(arrayPosition);
+document.addEventListener("DOMContentLoaded", () => {
+  cardsSection.style.paddingTop = headerHeight + "px";
+  portfolioSection.style.paddingTop = headerHeight + "px";
+  partnersSection.style.paddingTop = headerHeight + "px";
+  dataSection.style.paddingTop = headerHeight + "px";
+  teamsSection.style.paddingTop = headerHeight + "px";
 });
 
-rightCarouselArrow.addEventListener("click", function () {
-  move(-1);
-  arrayPosition = arrayPosition < 2 ? arrayPosition + 1 : 2;
-  setIndex();
-  indicatorParents.children[arrayPosition].classList.add("selected");
-  console.log(arrayPosition);
-});
+mainCarouselBtn.addEventListener("click", moveCarouselSection);
+portfolioBtn.addEventListener("click", moveCarouselSection);
 
-carouselSwipeArea.addEventListener("touchstart", (event) => {
-  touchStart = Math.floor(event.changedTouches[0].screenX);
-});
-carouselSwipeArea.addEventListener("touchend", (event) => {
-  touchEnd = Math.floor(event.changedTouches[0].screenX);
-  if (touchStart > touchEnd) {
-    move(-1);
-    arrayPosition = arrayPosition < 2 ? arrayPosition + 1 : 2;
-    setIndex();
-    indicatorParents.children[arrayPosition].classList.add("selected");
-    console.log(arrayPosition);
-  } else {
-    move(1);
-    arrayPosition = arrayPosition > 0 ? arrayPosition - 1 : 0;
-    setIndex();
-    indicatorParents.children[arrayPosition].classList.add("selected");
-  }
-});
+document
+  .querySelectorAll(".main-carousel-controls li")
+  .forEach(function (indicator, ind) {
+    indicator.addEventListener("click", () => {
+      console.log("Click main");
+      const slider = document.querySelector(".main-carousel-slider");
+      mainCarouselSectionIndex = ind;
+      document
+        .querySelector(".main-carousel-controls .selected")
+        .classList.remove("selected");
+      indicator.classList.add("selected");
+      slider.style.transform =
+        "translate(" + mainCarouselSectionIndex * -25 + "%)";
+    });
+  });
 
-
-//Second Page carousel in the Portfolio Section
 document.querySelectorAll(".controls li").forEach(function (indicator, ind) {
-  indicator.addEventListener("click", function () {
+  indicator.addEventListener("click", () => {
+    const slider = document.querySelector(".slider");
     portfolioSectionIndex = ind;
     document.querySelector(".controls .selected").classList.remove("selected");
     indicator.classList.add("selected");
     slider.style.transform = "translate(" + portfolioSectionIndex * -25 + "%)";
-    console.log(portfolioSectionIndex);
   });
 });
 
-rightPortfolioArrow.addEventListener("click", () => {
-  portfolioSectionIndex = portfolioSectionIndex < 3 ? portfolioSectionIndex + 1 : 0;
-  document.querySelector(".controls .selected").classList.remove("selected");
-  portfolioBulletNavParents.children[portfolioSectionIndex].classList.add(
-    "selected"
-  );
-  slider.style.transform = "translate(" + portfolioSectionIndex * -25 + "%)";
-});
-
-slider.addEventListener('touchend', (event) => {
-  touchEnd = Math.floor(event.changedTouches[0].screenX);
-  if (touchStart > touchEnd) {
-    portfolioSectionIndex = portfolioSectionIndex < 3 ? portfolioSectionIndex + 1 : 0;
+function moveCarouselSection(event) {
+  const buttonParentElementClass = event.target.parentNode.classList;
+  if (buttonParentElementClass.contains("carousel-btn")) {
+    console.log("alo");
+    const slider = document.querySelector(".main-carousel-slider");
+    mainCarouselSectionIndex =
+      mainCarouselSectionIndex < 3 ? mainCarouselSectionIndex + 1 : 0;
+    document
+      .querySelector(".main-carousel-controls .selected")
+      .classList.remove("selected");
+    mainCarouselBulletNavParents.children[
+      mainCarouselSectionIndex
+    ].classList.add("selected");
+    slider.style.transform =
+      "translate(" + mainCarouselSectionIndex * -25 + "%)";
+  } else {
+    const slider = document.querySelector(".slider");
+    portfolioSectionIndex =
+      portfolioSectionIndex < 3 ? portfolioSectionIndex + 1 : 0;
     document.querySelector(".controls .selected").classList.remove("selected");
     portfolioBulletNavParents.children[portfolioSectionIndex].classList.add(
       "selected"
     );
     slider.style.transform = "translate(" + portfolioSectionIndex * -25 + "%)";
   }
-})
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.documentElement.style.setProperty(
-    "--windowWidth",
-    `${window.innerWidth / 2000 + "s"}`
-  );
-
-  images = document.querySelector("#carousel-items");
-});
-
-window.addEventListener("resize", function () {
-  document.documentElement.style.setProperty(
-    "--windowWidth",
-    `${window.innerWidth / 2000 + "s"}`
-  );
-  move(0);
-});
+}
 
 window.addEventListener("resize", () => {
   document.body.classList.add("resize-animation-stopper");
@@ -127,30 +94,3 @@ window.addEventListener("resize", () => {
     document.body.classList.remove("resize-animation-stopper");
   }, 400);
 });
-
-function setIndex() {
-  document
-    .querySelector("#carousel-section .selected")
-    .classList.remove("selected");
-}
-
-function move(direction) {
-  const imageW = images.offsetWidth;
-  imagesPosition += direction;
-
-  imagesPosition =
-    imagesPosition > 0
-      ? 0
-      : Math.abs(imagesPosition) <= imagesAmount - 1
-      ? imagesPosition
-      : -(imagesAmount - 1);
-
-  if (direction == 0) {
-    images.classList.remove("animate");
-  } else {
-    images.classList.add("animate");
-  }
-
-  images.style.transform = "translateX(" + imagesPosition * imageW + "px)";
-}
-
