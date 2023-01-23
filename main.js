@@ -17,7 +17,7 @@ const mainCarouselBulletNavParents = document.querySelector(
 );
 
 const header = document.querySelector(".primary-header");
-const headerHeight = header.offsetHeight + 8;
+const headerHeight = header.offsetHeight + 16;
 
 let resizeTimer;
 var portfolioSectionIndex = 0;

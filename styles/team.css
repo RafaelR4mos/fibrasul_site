@@ -1,108 +1,111 @@
 .team-header > div {
-    margin-top: 0.3125rem;
-    width: 3.125rem;
-    height: 0.125rem;
-    background: var(--red-900);
+  margin-top: 0.3125rem;
+  width: 3.125rem;
+  height: 0.125rem;
+  background: var(--red-900);
 }
 
-.team-header p, .team-header span, .team-header span strong {
-    margin: 1rem auto;
-    font-weight: 600;
-    font-size: 1.625rem;
-    text-align: center;
+.team-header p,
+.team-header span,
+.team-header span strong {
+  margin: 1rem auto;
+  font-weight: 600;
+  font-size: 1.625rem;
+  text-align: center;
 }
 
 .team-header span {
-    display: block;
+  display: block;
 }
 
 .team-header span strong {
-    color: var(--cyan-900);
-
+  color: var(--cyan-900);
 }
 
 .banners-container {
-    margin: 1.5rem auto 0;
-    width: 85%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.5rem;
+  margin: 1.5rem auto 0;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .banners-container h4 {
-    font-size: 1.75rem;
+  font-size: 1.75rem;
 }
 
 .banner {
-    display: flex;
-    padding: 0.75rem 0.75rem 0.75rem 3.75rem;
-    background: linear-gradient(95deg, #110a35 1%, #3a3461 75%);
-    border-radius: 1.125rem;
+  display: flex;
+  padding: 0.75rem 0.75rem 0.75rem 3.75rem;
+  background: linear-gradient(95deg, #110a35 1%, #3a3461 75%);
+  border-radius: 1.125rem;
 }
 
 .banner:nth-child(even) {
-    flex-direction: row-reverse;
-    padding: 0.75rem 3.75rem 0.75rem 0.75rem;
-    background: linear-gradient(-95deg, #110a35 1%, #3a3461 75%);
+  flex-direction: row-reverse;
+  padding: 0.75rem 3.75rem 0.75rem 0.75rem;
+  background: linear-gradient(-95deg, #110a35 1%, #3a3461 75%);
 }
 
-.banner:nth-child(even) h4{
-    text-align: right;
+.banner:nth-child(even) h4 {
+  text-align: right;
 }
 
 .banner:nth-child(even) p {
-    float: right;
+  float: right;
 }
 
 .banner img {
-    aspect-ratio: 17 / 10;
-    max-width: 21.875rem;
-    border-radius: 1.125rem;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  width: 25rem;
+  border-radius: 1.125rem;
 }
 
- .banner p {
-    width: 80%;
-    margin-top: 1.75rem;
-    color: var(--stone-100);
-    text-align: justify;
+.banner p {
+  width: 80%;
+  margin-top: 1.75rem;
+  color: var(--stone-100);
+  text-align: justify;
 }
 
 .banner h4 {
-    margin-top: 1.5rem;
-    color: var(--stone-50);
+  margin-top: 1.5rem;
+  color: var(--stone-50);
 }
 
-@media(max-width: 890px) {
-    .banners-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        width: 100%;
-        gap: 1rem;
-    }
+@media (max-width: 55.625rem) {
+  .banners-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
 
-    .banners-container .banner {
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 8px 12px 8px;
-        height: 100%;
-    }
+  .banners-container .banner {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem 0.75rem 0.5rem;
+    height: 100%;
+  }
 
-    .banner p {
-        width: unset;
-        margin-top: 0;
-    }
+  .banner p {
+    width: unset;
+    margin-top: 0;
+  }
 
-    .banners-container .banner h4 {
-        text-align: left;
-        margin-bottom: 8px;
-        font-size: 1.4rem;
-    }
+  .banners-container .banner h4 {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
 
-    .banner img {
-        width: 100%;
-    }
+  .banner img {
+    width: 100%;
+  }
 }

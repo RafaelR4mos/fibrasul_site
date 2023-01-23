@@ -4,11 +4,10 @@ header {
   padding: 0.8rem 2rem;
   background: var(--stone-50);
   z-index: 999;
-  top: 0
+  top: 0;
 }
 
 .primary-header {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,6 +19,7 @@ header {
 
 .primary-header img {
   width: 11.25rem;
+  height: auto;
 }
 
 .primary-navigation {
@@ -41,7 +41,6 @@ header {
   display: flex;
   gap: 3rem;
 }
-
 
 @media (max-width: 43.75rem) {
   .primary-navigation {

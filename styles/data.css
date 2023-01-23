@@ -1,92 +1,96 @@
 .data-container {
-    position: relative;
-    padding: 2.5rem 5rem 2.5rem;
-    background: var(--neutral-800);
-    height: 37.5rem;
+  position: relative;
+  padding: 2.5rem 5rem 2.5rem;
+  background: var(--neutral-800);
+  height: 37.5rem;
 }
 
 .data-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .data-header h3 {
-    color: var(--neutral-600);
+  color: var(--neutral-600);
 }
 
 .data-header h2 {
-    color: var(--gray-200);
+  color: var(--gray-200);
 }
 
 .data-header img {
-    width: 14.375rem;
-    mix-blend-mode: overlay;
+  width: 14.375rem;
+  height: auto;
+  mix-blend-mode: overlay;
 }
 
 .data-flex {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem;
 }
 
 .data {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
 
 .data-content {
-    gap: 0.9375rem;
-    width: 100%;
-    display: flex;
+  gap: 0.9375rem;
+  width: 100%;
+  display: flex;
 }
 
-span > strong, .data-content > span {
-    font-weight: 800;
-    font-size: 3.75rem;
+span > strong,
+.data-content > span {
+  font-weight: 800;
+  font-size: 3.75rem;
 }
 
 span > strong {
-    margin-right: 0.3125rem;
-    color: var(--red-900);
+  margin-right: 0.3125rem;
+  color: var(--red-900);
 }
 
 .data-content > img {
-    position: relative;
-    right: 0px;
-    width: 2rem;
+  position: relative;
+  right: 0px;
+  width: 2rem;
 }
 
 .data-content > span {
-    color: var(--stone-50);
+  color: var(--stone-50);
 }
 
 .data-line {
-
-    height: 0.1875rem;
-    width: 100%;
-    background:  linear-gradient(90deg, rgba(127,29,29,1) 0%, rgba(0,0,0,1) 80%);
+  height: 0.1875rem;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(127, 29, 29, 1) 0%,
+    rgba(0, 0, 0, 1) 80%
+  );
 }
 
 .data > p {
-    color: #ffff;
+  color: #ffff;
 }
 
-@media(max-width: 1000px) {
-    .data-flex {
-        margin-top: 32px;
-        position: none;
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        justify-items: center;
-        align-items: center;
-    }
+@media (max-width: 1000px) {
+  .data-flex {
+    margin-top: 32px;
+    position: none;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    justify-items: center;
+    align-items: center;
+  }
 }
