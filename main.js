@@ -1,5 +1,8 @@
 import "./styles/index.css";
 
+const primaryNav = document.querySelector(".primary-navigation");
+const navToggle = document.querySelector(".mobile-nav-toggle");
+
 //Main carousel elements
 const mainCarouselBtn = document.querySelector(".carousel-btn");
 
@@ -22,6 +25,18 @@ const headerHeight = header.offsetHeight + 16;
 let resizeTimer;
 var portfolioSectionIndex = 0;
 var mainCarouselSectionIndex = 0;
+
+navToggle.addEventListener("click", () => {
+  const visibility = primaryNav.getAttribute("data-visible");
+
+  if (visibility === "false") {
+    primaryNav.setAttribute("data-visible", true);
+    navToggle.setAttribute("aria-expanded", true);
+  } else if (visibility === "true") {
+    primaryNav.setAttribute("data-visible", false);
+    navToggle.setAttribute("aria-expanded", false);
+  }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   cardsSection.style.paddingTop = headerHeight + "px";

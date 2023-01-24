@@ -86,7 +86,7 @@ span > strong {
 
 @media (max-width: 1000px) {
   .data-flex {
-    margin-top: 32px;
+    margin-top: 2rem;
     position: none;
     display: grid;
     grid-template-columns: repeat(2, 2fr);
